@@ -1,15 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.LoginFormController">
+<AnchorPane prefHeight="555.0" prefWidth="801.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.LoginFormController">
    <children>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="576.0" fitWidth="370.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/img.jpg" />
          </image>
       </ImageView>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" height="460.0" layoutX="43.0" layoutY="52.0" opacity="0.58" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="273.0" />
+      <ImageView fitHeight="83.0" fitWidth="74.0" layoutX="143.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/icons8-clothing-store-64.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="79.0" layoutY="148.0" prefWidth="202.0" text="Clothify Store" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="114.0" layoutY="520.0" text="\@2023 Sharada-Marasinha" textFill="WHITE" />
+      <Label layoutX="534.0" layoutY="65.0" prefHeight="68.0" prefWidth="125.0" text="Login">
+         <font>
+            <Font name="System Bold" size="46.0" />
+         </font>
+      </Label>
+      <JFXTextField layoutX="498.0" layoutY="193.0" prefHeight="25.0" prefWidth="211.0" promptText="Email" />
+      <ImageView fitHeight="25.0" fitWidth="23.0" layoutX="456.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/icons8-email-50.png" />
+         </image>
+      </ImageView>
+      <JFXPasswordField layoutX="498.0" layoutY="288.0" prefHeight="25.0" prefWidth="211.0" promptText="Password" />
+      <ImageView fitHeight="25.0" fitWidth="23.0" layoutX="456.0" layoutY="287.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/icons8-password-50.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="554.0" layoutY="417.0" prefHeight="38.0" prefWidth="92.0" style="-fx-background-color: black;" text="login" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="498.0" layoutY="337.0" opacity="0.54" text="Forgot PassWord?">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label layoutX="623.0" layoutY="495.0" opacity="0.54" text="Register" underline="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label layoutX="530.0" layoutY="495.0" opacity="0.54" text="Not a member ?">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label layoutX="93.0" layoutY="235.0" text="With decades of maintenance of " textFill="#e1e1e1" />
+      <Label layoutX="92.0" layoutY="252.0" prefHeight="17.0" prefWidth="175.0" text="way expertise and experience, no" textFill="#e1e1e1" />
+      <Label layoutX="100.0" layoutY="269.0" prefHeight="17.0" prefWidth="162.0" text="one knows the rail like Loram. " textFill="#e1e1e1" />
+      <Label layoutX="87.0" layoutY="286.0" prefHeight="17.0" prefWidth="196.0" text="Today, with our Loram Technologies" textFill="#e1e1e1" />
+      <Label layoutX="96.0" layoutY="304.0" prefHeight="17.0" prefWidth="184.0" text="business group, we’re leveraging " textFill="#e1e1e1" />
+      <Label layoutX="93.0" layoutY="327.0" text="With decades of maintenance of " textFill="#e1e1e1" />
+      <Label layoutX="92.0" layoutY="344.0" prefHeight="17.0" prefWidth="175.0" text="way expertise and experience, no" textFill="#e1e1e1" />
+      <Label layoutX="100.0" layoutY="361.0" prefHeight="17.0" prefWidth="162.0" text="one knows the rail like Loram. " textFill="#e1e1e1" />
+      <Label layoutX="87.0" layoutY="378.0" prefHeight="17.0" prefWidth="196.0" text="Today, with our Loram Technologies" textFill="#e1e1e1" />
+      <Label layoutX="96.0" layoutY="396.0" prefHeight="17.0" prefWidth="184.0" text="business group, we’re leveraging " textFill="#e1e1e1" />
    </children>
 </AnchorPane>
