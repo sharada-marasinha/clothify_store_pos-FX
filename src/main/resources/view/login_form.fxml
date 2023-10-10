@@ -15,13 +15,13 @@
    <children>
       <ImageView fitHeight="576.0" fitWidth="370.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@img/img.jpg" />
+            <Image url="@../img/img.jpg" />
          </image>
       </ImageView>
       <Rectangle arcHeight="50.0" arcWidth="50.0" height="460.0" layoutX="43.0" layoutY="52.0" opacity="0.58" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="273.0" />
       <ImageView fitHeight="83.0" fitWidth="74.0" layoutX="143.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@img/icons8-clothing-store-64.png" />
+            <Image url="@../img/icons8-clothing-store-64.png" />
          </image>
       </ImageView>
       <Label layoutX="79.0" layoutY="148.0" prefWidth="202.0" text="Clothify Store" textFill="WHITE">
@@ -35,19 +35,19 @@
             <Font name="System Bold" size="46.0" />
          </font>
       </Label>
-      <JFXTextField layoutX="498.0" layoutY="193.0" prefHeight="25.0" prefWidth="211.0" promptText="Email" />
+      <JFXTextField fx:id="txtEmail" layoutX="498.0" layoutY="193.0" prefHeight="25.0" prefWidth="211.0" promptText="Email" />
       <ImageView fitHeight="25.0" fitWidth="23.0" layoutX="456.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@img/icons8-email-50.png" />
+            <Image url="@../img/icons8-email-50.png" />
          </image>
       </ImageView>
-      <JFXPasswordField layoutX="498.0" layoutY="288.0" prefHeight="25.0" prefWidth="211.0" promptText="Password" />
+      <JFXPasswordField fx:id="txtPassword" layoutX="498.0" layoutY="288.0" prefHeight="25.0" prefWidth="211.0" promptText="Password" />
       <ImageView fitHeight="25.0" fitWidth="23.0" layoutX="456.0" layoutY="287.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@img/icons8-password-50.png" />
+            <Image url="@../img/icons8-password-50.png" />
          </image>
       </ImageView>
-      <JFXButton layoutX="554.0" layoutY="417.0" prefHeight="38.0" prefWidth="92.0" style="-fx-background-color: black;" text="login" textFill="WHITE">
+      <JFXButton layoutX="554.0" layoutY="417.0" onAction="#btnLoginOnAction" prefHeight="38.0" prefWidth="92.0" style="-fx-background-color: black;" text="login" textFill="WHITE">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
