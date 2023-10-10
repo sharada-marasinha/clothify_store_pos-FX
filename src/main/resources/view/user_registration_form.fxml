@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="644.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.DashBordFormController">
+   <children>
+      <ImageView fitHeight="651.0" fitWidth="972.0" layoutY="-1.0" pickOnBounds="true">
+         <image>
+            <Image url="@../img/img-min.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="651.0" layoutX="-1.0" layoutY="-1.0" opacity="0.49" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="972.0">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Rectangle>
+      <Label layoutX="91.0" layoutY="43.0" text="Employee Register " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="56.0" fitWidth="51.0" layoutX="30.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-clothing-store-64.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" height="492.0" layoutX="74.0" layoutY="115.0" opacity="0.49" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="814.0">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Rectangle>
+      <Label layoutX="117.0" layoutY="151.0" text="Employer ID" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField editable="false" focusColor="WHITE" layoutX="220.0" layoutY="149.0" prefHeight="25.0" prefWidth="93.0" unFocusColor="#ffaaaa" />
+      <Label layoutX="117.0" layoutY="202.0" text="Name" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField focusColor="WHITE" layoutX="220.0" layoutY="195.0" prefHeight="25.0" prefWidth="195.0" unFocusColor="#ffaaaa" />
+      <Label layoutX="118.0" layoutY="249.0" text="NIC" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField focusColor="WHITE" layoutX="221.0" layoutY="242.0" prefHeight="25.0" prefWidth="195.0" unFocusColor="#ffaaaa" />
+      <Label layoutX="118.0" layoutY="295.0" text="Address" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField focusColor="WHITE" layoutX="221.0" layoutY="288.0" prefHeight="25.0" prefWidth="195.0" unFocusColor="#ffaaaa" />
+      <TableView layoutX="123.0" layoutY="375.0" prefHeight="200.0" prefWidth="715.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <Label layoutX="527.0" layoutY="155.0" text="Address" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField focusColor="WHITE" layoutX="630.0" layoutY="148.0" prefHeight="25.0" prefWidth="195.0" unFocusColor="#ffaaaa" />
+      <Label layoutX="527.0" layoutY="201.0" text="Address" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField focusColor="WHITE" layoutX="630.0" layoutY="194.0" prefHeight="25.0" prefWidth="195.0" unFocusColor="#ffaaaa" />
+      <Label layoutX="527.0" layoutY="248.0" text="Address" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField focusColor="WHITE" layoutX="630.0" layoutY="241.0" prefHeight="25.0" prefWidth="195.0" unFocusColor="#ffaaaa" />
+      <Label layoutX="527.0" layoutY="294.0" text="Address" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField focusColor="WHITE" layoutX="630.0" layoutY="287.0" prefHeight="25.0" prefWidth="195.0" unFocusColor="#ffaaaa" />
+   </children>
+</AnchorPane>
