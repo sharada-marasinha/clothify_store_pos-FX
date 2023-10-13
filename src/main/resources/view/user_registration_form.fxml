@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -49,7 +51,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <JFXTextField focusColor="WHITE" layoutX="220.0" layoutY="195.0" prefHeight="25.0" prefWidth="195.0" unFocusColor="#ffaaaa" />
+      <JFXTextField focusColor="WHITE" layoutX="220.0" layoutY="195.0" prefHeight="25.0" prefWidth="195.0" unFocusColor="#192a56" />
       <Label layoutX="118.0" layoutY="249.0" text="NIC" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
@@ -62,37 +64,56 @@
          </font>
       </Label>
       <JFXTextField focusColor="WHITE" layoutX="221.0" layoutY="288.0" prefHeight="25.0" prefWidth="195.0" unFocusColor="#ffaaaa" />
-      <TableView layoutX="123.0" layoutY="375.0" prefHeight="200.0" prefWidth="715.0">
+      <TableView layoutX="123.0" layoutY="375.0" prefHeight="200.0" prefWidth="715.0" styleClass="textPane" stylesheets="@../css/Table.css">
         <columns>
           <TableColumn prefWidth="75.0" text="ID" />
-          <TableColumn prefWidth="75.0" text="Title" />
-            <TableColumn prefWidth="75.0" text="Title" />
-            <TableColumn prefWidth="75.0" text="Title" />
+          <TableColumn prefWidth="75.0" text="Name" />
+            <TableColumn prefWidth="75.0" text="NIC" />
+            <TableColumn prefWidth="90.0" text="Address" />
+            <TableColumn prefWidth="97.0" text="Date of Birth" />
+            <TableColumn prefWidth="81.0" text="Contact" />
+            <TableColumn prefWidth="115.0" text="Bank Account No" />
+            <TableColumn prefWidth="106.0" text="Bank Branch" />
         </columns>
       </TableView>
-      <Label layoutX="527.0" layoutY="155.0" text="Address" textFill="WHITE">
+      <Label layoutX="506.0" layoutY="155.0" text="Date of Birth" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <JFXTextField focusColor="WHITE" layoutX="630.0" layoutY="148.0" prefHeight="25.0" prefWidth="195.0" unFocusColor="#ffaaaa" />
-      <Label layoutX="527.0" layoutY="201.0" text="Address" textFill="WHITE">
+      <Label layoutX="506.0" layoutY="201.0" text="Contact" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
       <JFXTextField focusColor="WHITE" layoutX="630.0" layoutY="194.0" prefHeight="25.0" prefWidth="195.0" unFocusColor="#ffaaaa" />
-      <Label layoutX="527.0" layoutY="248.0" text="Address" textFill="WHITE">
+      <Label layoutX="506.0" layoutY="248.0" text="Bank Account No" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
       <JFXTextField focusColor="WHITE" layoutX="630.0" layoutY="241.0" prefHeight="25.0" prefWidth="195.0" unFocusColor="#ffaaaa" />
-      <Label layoutX="527.0" layoutY="294.0" text="Address" textFill="WHITE">
+      <Label layoutX="506.0" layoutY="294.0" text="Bank Branch" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
       <JFXTextField focusColor="WHITE" layoutX="630.0" layoutY="287.0" prefHeight="25.0" prefWidth="195.0" unFocusColor="#ffaaaa" />
+      <DatePicker layoutX="630.0" layoutY="152.0" prefHeight="25.0" prefWidth="195.0" />
+      <JFXButton layoutX="762.0" layoutY="333.0" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #2ecc71;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="588.0" layoutY="333.0" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #f39c12;" text="Print" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="675.0" layoutY="333.0" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #3498db;" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>
