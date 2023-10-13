@@ -13,7 +13,6 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="644.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.DashBordFormController">
    <children>
       <ImageView fitHeight="286.0" fitWidth="972.0" layoutY="-1.0" pickOnBounds="true">
@@ -47,6 +46,9 @@
          <font>
             <Font size="1.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </JFXButton>
       <JFXButton ellipsisString="" layoutX="183.0" layoutY="177.0" prefHeight="82.0" prefWidth="84.0" style="-fx-background-color: white;" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
          <graphic>
@@ -59,6 +61,9 @@
          <font>
             <Font size="1.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </JFXButton>
       <JFXButton ellipsisString="" layoutX="313.0" layoutY="177.0" prefHeight="82.0" prefWidth="84.0" style="-fx-background-color: white;" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
          <graphic>
@@ -71,6 +76,9 @@
          <font>
             <Font size="1.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </JFXButton>
       <JFXButton ellipsisString="" layoutX="444.0" layoutY="177.0" prefHeight="82.0" prefWidth="84.0" style="-fx-background-color: white;" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
          <graphic>
@@ -83,6 +91,9 @@
          <font>
             <Font size="1.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </JFXButton>
       <JFXButton ellipsisString="" layoutX="570.0" layoutY="177.0" prefHeight="82.0" prefWidth="84.0" style="-fx-background-color: white;" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
          <graphic>
@@ -95,6 +106,9 @@
          <font>
             <Font size="1.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </JFXButton>
       <JFXButton ellipsisString="" layoutX="700.0" layoutY="177.0" prefHeight="82.0" prefWidth="84.0" style="-fx-background-color: white;" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
          <graphic>
@@ -107,6 +121,9 @@
          <font>
             <Font size="1.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </JFXButton>
       <JFXButton ellipsisString="" layoutX="830.0" layoutY="177.0" prefHeight="82.0" prefWidth="84.0" style="-fx-background-color: white;" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
          <graphic>
@@ -119,6 +136,9 @@
          <font>
             <Font size="1.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </JFXButton>
       <Label layoutX="78.0" layoutY="151.0" text="Order" textFill="WHITE">
          <font>

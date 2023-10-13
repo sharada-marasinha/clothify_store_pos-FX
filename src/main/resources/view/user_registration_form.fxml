@@ -64,8 +64,10 @@
       <JFXTextField focusColor="WHITE" layoutX="221.0" layoutY="288.0" prefHeight="25.0" prefWidth="195.0" unFocusColor="#ffaaaa" />
       <TableView layoutX="123.0" layoutY="375.0" prefHeight="200.0" prefWidth="715.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn prefWidth="75.0" text="ID" />
+          <TableColumn prefWidth="75.0" text="Title" />
+            <TableColumn prefWidth="75.0" text="Title" />
+            <TableColumn prefWidth="75.0" text="Title" />
         </columns>
       </TableView>
       <Label layoutX="527.0" layoutY="155.0" text="Address" textFill="WHITE">
