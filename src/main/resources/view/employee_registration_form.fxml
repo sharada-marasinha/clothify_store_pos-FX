@@ -51,7 +51,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <JFXTextField focusColor="WHITE" layoutX="220.0" layoutY="195.0" prefHeight="25.0" prefWidth="195.0" unFocusColor="#192a56" />
+      <JFXTextField focusColor="WHITE" layoutX="220.0" layoutY="195.0" prefHeight="25.0" prefWidth="195.0" unFocusColor="#ffaaaa" />
       <Label layoutX="118.0" layoutY="249.0" text="NIC" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
