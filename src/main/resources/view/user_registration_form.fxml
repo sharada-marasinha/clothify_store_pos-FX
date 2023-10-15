@@ -13,7 +13,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="644.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.DashBordFormController">
+<AnchorPane prefHeight="644.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.UserRegistrationFormController">
    <children>
       <ImageView fitHeight="651.0" fitWidth="972.0" layoutY="-1.0" pickOnBounds="true">
          <image>
@@ -110,5 +110,20 @@
       <JFXPasswordField editable="false" layoutX="651.0" layoutY="418.0" prefHeight="25.0" prefWidth="195.0" unFocusColor="#ffaaaa" />
       <JFXCheckBox layoutX="651.0" layoutY="371.0" text="show password" textFill="WHITE" unCheckedColor="WHITE" />
       <JFXCheckBox layoutX="246.0" layoutY="278.0" text="show password" textFill="WHITE" unCheckedColor="WHITE" />
+      <JFXButton ellipsisString="" layoutX="885.0" layoutY="31.0" onAction="#backBtnOnAction" prefHeight="59.0" prefWidth="65.0" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font size="1.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="41.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-back-100.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
    </children>
 </AnchorPane>

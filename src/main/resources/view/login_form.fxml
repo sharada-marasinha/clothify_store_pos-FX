@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="555.0" prefWidth="801.0" xmlns="http://javafx.com/javafx"  xmlns:fx="http://javafx.com/fxml" fx:controller="edu.icet.controller.LoginFormController">
+<AnchorPane fx:id="root" prefHeight="555.0" prefWidth="801.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.LoginFormController">
    <children>
       <ImageView fitHeight="576.0" fitWidth="370.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -47,17 +47,12 @@
             <Image url="@../img/icons8-password-50.png" />
          </image>
       </ImageView>
-      <JFXButton layoutX="554.0" layoutY="417.0" onAction="#btnLoginOnAction" prefHeight="38.0" prefWidth="92.0" style="-fx-background-color: black;" text="login" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="17.0" />
-         </font>
-      </JFXButton>
-      <Label layoutX="498.0" layoutY="337.0" opacity="0.54" text="Forgot PassWord?">
+      <Label layoutX="498.0" layoutY="337.0" onMouseClicked="#lblMouseClickOnAction" opacity="0.54" text="Forgot PassWord?">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Label>
-      <Label layoutX="623.0" layoutY="495.0" opacity="0.54" text="Register" underline="true">
+      <Label layoutX="623.0" layoutY="495.0" onMouseClicked="#lblRegisterMouseClickOnAction" opacity="0.54" text="Register" underline="true">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -77,5 +72,10 @@
       <Label layoutX="100.0" layoutY="361.0" prefHeight="17.0" prefWidth="162.0" text="one knows the rail like Loram. " textFill="#e1e1e1" />
       <Label layoutX="87.0" layoutY="378.0" prefHeight="17.0" prefWidth="196.0" text="Today, with our Loram Technologies" textFill="#e1e1e1" />
       <Label layoutX="96.0" layoutY="396.0" prefHeight="17.0" prefWidth="184.0" text="business group, we’re leveraging " textFill="#e1e1e1" />
+      <JFXButton layoutX="554.0" layoutY="415.0" onAction="#btnLoginOnAction" prefHeight="31.0" prefWidth="86.0" style="-fx-background-color: black;" text="Login" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>

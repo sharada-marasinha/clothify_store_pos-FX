@@ -13,7 +13,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="644.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.DashBordFormController">
+<AnchorPane fx:id="LodeFormContent" prefHeight="644.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.PlaceOrderFormController">
    <children>
       <ImageView fitHeight="651.0" fitWidth="972.0" layoutY="-1.0" pickOnBounds="true">
          <image>
@@ -77,7 +77,7 @@
             <TableColumn prefWidth="91.0" text="Option" />
          </columns>
       </TableView>
-      <Label layoutX="599.0" layoutY="62.0" text="Order ID* :" textFill="WHITE">
+      <Label layoutX="563.0" layoutY="67.0" text="Order ID* :" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -87,7 +87,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <JFXTextField focusColor="WHITE" layoutX="679.0" layoutY="60.0" prefHeight="25.0" prefWidth="195.0" unFocusColor="#ffaaaa" />
+      <JFXTextField focusColor="WHITE" layoutX="643.0" layoutY="65.0" prefHeight="25.0" prefWidth="195.0" unFocusColor="#ffaaaa" />
       <Label layoutX="97.0" layoutY="339.0" text="Description* :" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
@@ -203,6 +203,21 @@
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
+      </JFXButton>
+      <JFXButton ellipsisString="" layoutX="874.0" layoutY="30.0" onAction="#backBtnOnAction" prefHeight="59.0" prefWidth="65.0" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font size="1.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="41.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-back-100.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </JFXButton>
    </children>
 </AnchorPane>

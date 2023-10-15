@@ -13,7 +13,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="644.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.DashBordFormController">
+<AnchorPane fx:id="LodeFormContent" prefHeight="644.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.AddItemsFormController">
    <children>
       <ImageView fitHeight="651.0" fitWidth="972.0" layoutY="-1.0" pickOnBounds="true">
          <image>
@@ -128,6 +128,21 @@
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
+      </JFXButton>
+      <JFXButton ellipsisString="" layoutX="878.0" layoutY="27.0" onAction="#backBtnOnAction" prefHeight="59.0" prefWidth="65.0" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font size="1.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="41.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-back-100.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </JFXButton>
    </children>
 </AnchorPane>
