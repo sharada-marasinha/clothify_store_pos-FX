@@ -29,7 +29,9 @@ public class LoginFormController {
             Stage currentStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             // Close the previous window
             currentStage.close();
+            stage.setResizable(false);
             stage.show();
+
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -47,6 +49,7 @@ public class LoginFormController {
             Stage currentStage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
             // Close the previous window
             currentStage.close();
+            stage.setResizable(false);
             stage.show();
 
         } catch (Exception e) {
@@ -64,6 +67,7 @@ public class LoginFormController {
             Stage currentStage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
             // Close the previous window
             currentStage.close();
+            stage.setResizable(false);
             stage.show();
 
         } catch (Exception e) {

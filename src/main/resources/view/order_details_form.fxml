@@ -44,8 +44,8 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <JFXTextField focusColor="WHITE" layoutX="160.0" layoutY="140.0" prefHeight="25.0" prefWidth="195.0" unFocusColor="#ffaaaa" />
-      <TableView layoutX="54.0" layoutY="189.0" prefHeight="200.0" prefWidth="867.0" styleClass="dashboard-colour2" stylesheets="@../css/Table.css">
+      <JFXTextField focusColor="WHITE" layoutX="149.0" layoutY="134.0" prefHeight="25.0" prefWidth="141.0" unFocusColor="#ffaaaa" />
+      <TableView layoutX="54.0" layoutY="187.0" prefHeight="200.0" prefWidth="867.0" styleClass="dashboard-colour2" stylesheets="@../css/Table.css">
         <columns>
           <TableColumn prefWidth="75.0" text="Order ID" />
           <TableColumn prefWidth="91.0" text="Date" />

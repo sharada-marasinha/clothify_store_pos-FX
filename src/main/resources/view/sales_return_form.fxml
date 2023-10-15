@@ -44,8 +44,8 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <JFXTextField focusColor="WHITE" layoutX="160.0" layoutY="140.0" prefHeight="25.0" prefWidth="195.0" unFocusColor="#ffaaaa" />
-      <TableView layoutX="56.0" layoutY="217.0" prefHeight="347.0" prefWidth="867.0" styleClass="dashboard-colour2" stylesheets="@../css/Table.css">
+      <JFXTextField focusColor="WHITE" layoutX="131.0" layoutY="140.0" prefHeight="25.0" prefWidth="195.0" unFocusColor="#ffaaaa" />
+      <TableView layoutX="54.0" layoutY="217.0" prefHeight="347.0" prefWidth="867.0" styleClass="dashboard-colour2" stylesheets="@../css/Table.css">
          <columns>
             <TableColumn prefWidth="75.0" text="Item Code" />
             <TableColumn prefWidth="81.0" text="Description" />
@@ -59,28 +59,28 @@
             <TableColumn prefWidth="87.0" text="Option" />
          </columns>
       </TableView>
-      <Label layoutX="644.0" layoutY="144.0" text="Order ID* :" textFill="WHITE">
+      <Label layoutX="626.0" layoutY="144.0" text="Order ID* :" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <JFXTextField focusColor="WHITE" layoutX="728.0" layoutY="135.0" prefHeight="25.0" prefWidth="195.0" unFocusColor="#ffaaaa" />
+      <JFXTextField focusColor="WHITE" layoutX="710.0" layoutY="135.0" prefHeight="25.0" prefWidth="195.0" unFocusColor="#ffaaaa" />
       <Label layoutX="71.0" layoutY="587.0" text="Total :" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="14.0" />
+            <Font name="System Bold" size="15.0" />
          </font>
       </Label>
       <Label layoutX="130.0" layoutY="587.0" text="75000.00" textFill="RED">
          <font>
-            <Font name="System Bold" size="14.0" />
+            <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <JFXButton layoutX="826.0" layoutY="175.0" prefHeight="31.0" prefWidth="91.0" style="-fx-background-color: #2ecc71;" text="Save" textFill="WHITE">
+      <JFXButton layoutX="808.0" layoutY="175.0" prefHeight="31.0" prefWidth="91.0" style="-fx-background-color: #2ecc71;" text="Save" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="740.0" layoutY="175.0" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #3498db;" text="Clear" textFill="WHITE">
+      <JFXButton layoutX="722.0" layoutY="175.0" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #3498db;" text="Clear" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
