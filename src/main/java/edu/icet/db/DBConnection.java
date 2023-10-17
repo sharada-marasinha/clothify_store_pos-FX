@@ -8,9 +8,8 @@ import java.sql.SQLException;
 public class DBConnection {
     private static DBConnection instance;
     private Connection connection;
-    private DBConnection() throws ClassNotFoundException, SQLException {
-        Class.forName("com.mysql.cj.jdbc.Driver");
-        connection= DriverManager.getConnection("jdbc:mysql://localhost/Thogakade?useSSL=false","root","1234");
+    private DBConnection() throws SQLException {
+        connection= DriverManager.getConnection("jdbc:mysql://localhost/clothfystore?useSSL=false","root","19216811");
     }
     public Connection getConnection(){
         return connection;
