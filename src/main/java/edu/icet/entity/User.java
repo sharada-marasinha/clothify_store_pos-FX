@@ -1,4 +1,4 @@
-package edu.icet.dto;
+package edu.icet.entity;
 
 import lombok.*;
 
@@ -8,6 +8,7 @@ import lombok.*;
 @Getter
 @ToString
 public class User {
+    private int id;
     private String user_name;
     private String email;
     private String password;

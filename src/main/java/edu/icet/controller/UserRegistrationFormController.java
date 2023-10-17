@@ -4,7 +4,7 @@ import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import edu.icet.utill.CrudUtil;
-import edu.icet.dto.User;
+import edu.icet.entity.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -59,10 +59,8 @@ public class UserRegistrationFormController implements Initializable {
 
 
         String SQL = "INSERT INTO User (user_name, email, password, user_type) VALUES (?, ?, ?, ?)";
-        User user =new User(txtUserName.getText(),txtEmail.getText(),txtUserPassword.getText(),useType);
-        System.out.println(user);
         try {
-            CrudUtil.execute(SQL,user);
+            CrudUtil.execute(SQL,txtUserName.getText(),txtEmail.getText(),txtUserPassword.getText(),useType);
         } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }

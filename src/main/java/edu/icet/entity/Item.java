@@ -1,4 +1,4 @@
-package edu.icet.dto;
+package edu.icet.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
