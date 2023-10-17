@@ -8,7 +8,7 @@ import lombok.*;
 @Setter
 @Getter
 public class Supplier {
-    private String supplierId;
+    private Integer supplierId;
     private String title;
     private String supplierName;
     private String contact;
