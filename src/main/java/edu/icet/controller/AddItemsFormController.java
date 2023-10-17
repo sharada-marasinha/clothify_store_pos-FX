@@ -16,7 +16,7 @@ public class AddItemsFormController {
 
         assert resource != null;
 
-        Parent load = (Parent) FXMLLoader.load(resource);
+        Parent load = FXMLLoader.load(resource);
         this.LodeFormContent.getChildren().clear();
         this.LodeFormContent.getChildren().add(load);
     }
