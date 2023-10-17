@@ -3,6 +3,7 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -40,40 +41,40 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </Rectangle>
-      <Label layoutX="122.0" layoutY="151.0" text="Employer ID" textFill="WHITE">
+      <Label layoutX="121.0" layoutY="150.0" text="Employer ID" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <JFXTextField editable="false" focusColor="WHITE" layoutX="226.0" layoutY="149.0" prefHeight="25.0" prefWidth="93.0" unFocusColor="#ffaaaa" />
-      <Label layoutX="122.0" layoutY="202.0" text="Name" textFill="WHITE">
+      <JFXTextField fx:id="txtEmpId" editable="false" focusColor="WHITE" layoutX="223.0" layoutY="147.0" prefHeight="25.0" prefWidth="93.0" promptText="id" style="-fx-background-color: white;" unFocusColor="#ffaaaa" />
+      <Label layoutX="122.0" layoutY="196.0" text="Name" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <JFXTextField focusColor="WHITE" layoutX="225.0" layoutY="195.0" prefHeight="25.0" prefWidth="195.0" unFocusColor="#ffaaaa" />
-      <Label layoutX="123.0" layoutY="249.0" text="NIC" textFill="WHITE">
+      <JFXTextField fx:id="txtEmpName" focusColor="WHITE" layoutX="224.0" layoutY="189.0" prefHeight="25.0" prefWidth="195.0" promptText="name" style="-fx-background-color: white;" unFocusColor="#ffaaaa" />
+      <Label layoutX="123.0" layoutY="285.0" text="NIC" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <JFXTextField focusColor="WHITE" layoutX="226.0" layoutY="242.0" prefHeight="25.0" prefWidth="195.0" unFocusColor="#ffaaaa" />
-      <Label layoutX="123.0" layoutY="295.0" text="Address" textFill="WHITE">
+      <JFXTextField fx:id="txtEmpNic" focusColor="WHITE" layoutX="226.0" layoutY="278.0" prefHeight="25.0" prefWidth="195.0" promptText="nic" style="-fx-background-color: white;" unFocusColor="#ffaaaa" />
+      <Label layoutX="123.0" layoutY="331.0" text="Address" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <JFXTextField focusColor="WHITE" layoutX="226.0" layoutY="288.0" prefHeight="25.0" prefWidth="195.0" unFocusColor="#ffaaaa" />
-      <TableView layoutX="128.0" layoutY="375.0" prefHeight="200.0" prefWidth="715.0" styleClass="dashboard-colour2" stylesheets="@../css/Table.css">
+      <JFXTextField fx:id="txtEmpAddress" focusColor="WHITE" layoutX="226.0" layoutY="324.0" prefHeight="25.0" prefWidth="195.0" promptText="address" style="-fx-background-color: white;" unFocusColor="#ffaaaa" />
+      <TableView fx:id="empTable" layoutX="128.0" layoutY="375.0" prefHeight="200.0" prefWidth="715.0" styleClass="dashboard-colour2" stylesheets="@../css/Table.css">
         <columns>
-          <TableColumn prefWidth="75.0" text="ID" />
-          <TableColumn prefWidth="75.0" text="Name" />
-            <TableColumn prefWidth="75.0" text="NIC" />
-            <TableColumn prefWidth="90.0" text="Address" />
-            <TableColumn prefWidth="97.0" text="Date of Birth" />
-            <TableColumn prefWidth="81.0" text="Contact" />
-            <TableColumn prefWidth="115.0" text="Bank Account No" />
-            <TableColumn prefWidth="106.0" text="Bank Branch" />
+          <TableColumn fx:id="empColId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="empColName" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="empColNic" prefWidth="75.0" text="NIC" />
+            <TableColumn fx:id="empColAddress" prefWidth="90.0" text="Address" />
+            <TableColumn fx:id="empColDob" prefWidth="97.0" text="Date of Birth" />
+            <TableColumn fx:id="empColContact" prefWidth="81.0" text="Contact" />
+            <TableColumn fx:id="empColBAccNo" prefWidth="115.0" text="Bank Account No" />
+            <TableColumn fx:id="empColBankBranch" prefWidth="106.0" text="Bank Branch" />
         </columns>
       </TableView>
       <Label layoutX="511.0" layoutY="155.0" text="Date of Birth" textFill="WHITE">
@@ -86,31 +87,26 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <JFXTextField focusColor="WHITE" layoutX="637.0" layoutY="194.0" prefHeight="25.0" prefWidth="195.0" unFocusColor="#ffaaaa" />
+      <JFXTextField fx:id="txtEmpContact" focusColor="WHITE" layoutX="645.0" layoutY="194.0" prefHeight="25.0" prefWidth="195.0" promptText="contact" style="-fx-background-color: white;" unFocusColor="#ffaaaa" />
       <Label layoutX="511.0" layoutY="248.0" text="Bank Account No" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <JFXTextField focusColor="WHITE" layoutX="637.0" layoutY="241.0" prefHeight="25.0" prefWidth="195.0" unFocusColor="#ffaaaa" />
+      <JFXTextField fx:id="txtEmpBankAcc" focusColor="WHITE" layoutX="645.0" layoutY="241.0" prefHeight="25.0" prefWidth="195.0" promptText="Bank Acc" style="-fx-background-color: white;" unFocusColor="#ffaaaa" />
       <Label layoutX="512.0" layoutY="294.0" text="Bank Branch" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <JFXTextField focusColor="WHITE" layoutX="637.0" layoutY="287.0" prefHeight="25.0" prefWidth="195.0" unFocusColor="#ffaaaa" />
-      <DatePicker layoutX="637.0" layoutY="152.0" prefHeight="25.0" prefWidth="195.0" />
-      <JFXButton layoutX="767.0" layoutY="333.0" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #2ecc71;" text="Save" textFill="WHITE">
+      <JFXTextField fx:id="txtEmpBankBranch" focusColor="WHITE" layoutX="645.0" layoutY="287.0" prefHeight="25.0" prefWidth="195.0" promptText="Bank Branch" style="-fx-background-color: white;" unFocusColor="#ffaaaa" />
+      <DatePicker fx:id="dEmpDate" layoutX="645.0" layoutY="152.0" prefHeight="25.0" prefWidth="195.0" promptText="date" />
+      <JFXButton layoutX="767.0" layoutY="331.0" onAction="#btnSaveOnAction" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #2ecc71;" text="Save" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="593.0" layoutY="333.0" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #f39c12;" text="Print" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font>
-      </JFXButton>
-      <JFXButton layoutX="680.0" layoutY="333.0" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #3498db;" text="Clear" textFill="WHITE">
+      <JFXButton layoutX="680.0" layoutY="331.0" onAction="#btnClearOnAction" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #f39c12;" text="Clear" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
@@ -130,5 +126,11 @@
             </ImageView>
          </graphic>
       </JFXButton>
+      <ComboBox fx:id="cmbTitle" layoutX="225.0" layoutY="237.0" prefHeight="25.0" prefWidth="195.0" promptText="Title" />
+      <Label layoutX="123.0" layoutY="243.0" text="Title" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

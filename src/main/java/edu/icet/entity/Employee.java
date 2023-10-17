@@ -7,7 +7,7 @@ import lombok.*;
 @Getter
 @Setter
 public class Employee {
-    private String empId;
+    private Integer empId;
     private String title;
     private String name;
     private String nic;

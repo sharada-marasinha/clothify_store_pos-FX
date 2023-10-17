@@ -11,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 
 import java.net.URL;
@@ -54,16 +55,28 @@ public class UserRegistrationFormController implements Initializable {
     }
 
     public void btnCreateOnAction(ActionEvent actionEvent) {
-        String useType =redUserType.getSelectionModel().getSelectedItem().toString();
-        System.out.println(useType);
+        if (txtUserPassword.getText().equals(txtConformUserPassword.getText())) {
+            try {
+                boolean isSaved = CrudUtil.execute(
+                        "INSERT INTO User (user_name, email, password, user_type) VALUES (?, ?, ?, ?)",
+                        txtUserName.getText(),
+                        txtEmail.getText(),
+                        txtUserPassword.getText(),
+                        redUserType.getSelectionModel().getSelectedItem().toString()
+                );
+                if (isSaved){
+                    new Alert(Alert.AlertType.INFORMATION,"User Registration Successfully !").show();
+                }else{
+                    new Alert(Alert.AlertType.ERROR,"Something went wrong !").show();
 
-
-        String SQL = "INSERT INTO User (user_name, email, password, user_type) VALUES (?, ?, ?, ?)";
-        try {
-            CrudUtil.execute(SQL,txtUserName.getText(),txtEmail.getText(),txtUserPassword.getText(),useType);
-        } catch (SQLException | ClassNotFoundException e) {
-            throw new RuntimeException(e);
+                }
+            } catch (SQLException | ClassNotFoundException e) {
+                new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+            }
+        }else {
+            new Alert(Alert.AlertType.ERROR,"Please Conformed your password !").show();
         }
+
     }
 
 
