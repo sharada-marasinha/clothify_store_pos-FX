@@ -16,6 +16,7 @@ import javafx.stage.Stage;
 
 import java.net.URL;
 import java.sql.SQLException;
+import java.util.Random;
 import java.util.ResourceBundle;
 
 public class UserRegistrationFormController implements Initializable {
@@ -80,4 +81,18 @@ public class UserRegistrationFormController implements Initializable {
     }
 
 
+    public void btnOtpOnAction(ActionEvent actionEvent) {
+        System.out.println(getOtp(4));
+    }
+
+    public char [] getOtp(int len){
+        String numbers ="0123456789";
+        Random rNd = new Random();
+        char [] otp = new char[len];
+        for (int i = 0; i <len; i++) {
+            otp[i]=numbers.charAt(rNd.nextInt(numbers.length()));
+
+        }
+        return otp;
+    }
 }
