@@ -58,9 +58,9 @@ public class UserRegistrationFormController implements Initializable {
             val2.set(newValue);
             conformPassword(val1,val2);
         });
-        conformPassword(val1,val2);
+
+
         cmbUserType.getItems().addAll("Admin", "User");
-        System.out.println(txtAdminUserName.getText());
 
     }
     public void conformPassword(AtomicReference<String> newValueTxt1, AtomicReference<String> newValueTxt2) {
@@ -93,8 +93,6 @@ public class UserRegistrationFormController implements Initializable {
     }
 
     public void btnAdminCheckOnAction(ActionEvent actionEvent) {
-
-
         try {
             ResultSet resultSet = CrudUtil.execute("SELECT user_name, password FROM user WHERE user_type = 'Admin' AND user_name = ? AND password = ?",
                     txtAdminUserName.getText(),
@@ -107,7 +105,7 @@ public class UserRegistrationFormController implements Initializable {
                 txtOtp.setDisable(false);
                 btnSend.setDisable(false);
             } else {
-                System.out.println("Admin user not found.");
+                new Alert(Alert.AlertType.INFORMATION, "Admin user not found !").show();
             }
         } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
@@ -122,7 +120,7 @@ public class UserRegistrationFormController implements Initializable {
                         txtUserName.getText(),
                         txtEmail.getText(),
                         txtUserPassword.getText(),
-                        redUserType.getSelectionModel().getSelectedItem().toString()
+                        cmbUserType.getSelectionModel().getSelectedItem().toString()
                 );
                 if (isSaved) {
                     new Alert(Alert.AlertType.INFORMATION, "User Registration Successfully !").show();

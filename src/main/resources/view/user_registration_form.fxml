@@ -102,8 +102,8 @@
       </font>
    </JFXButton>
    <JFXPasswordField fx:id="txtAdminPassword" layoutX="248.0" layoutY="239.0" prefHeight="25.0" prefWidth="122.0" style="-fx-background-color: white;" unFocusColor="#ffaaaa" />
-   <JFXPasswordField fx:id="txtUserPassword" layoutX="644.0" layoutY="384.0" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: white;" unFocusColor="#ffaaaa" />
-   <JFXPasswordField fx:id="txtConformUserPassword" layoutX="645.0" layoutY="447.0" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: white;" unFocusColor="#ffaaaa" />
+   <JFXPasswordField fx:id="txtUserPassword" disable="true" layoutX="644.0" layoutY="384.0" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: white;" unFocusColor="#ffaaaa" />
+   <JFXPasswordField fx:id="txtConformUserPassword" disable="true" layoutX="645.0" layoutY="447.0" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: white;" unFocusColor="#ffaaaa" />
    <JFXCheckBox fx:id="checkBoxUserPassword" layoutX="733.0" layoutY="486.0" onAction="#checkBoxUserPasswordOnAction" text="show password" textFill="WHITE" unCheckedColor="WHITE" />
    <JFXCheckBox fx:id="checkBoxAdminPassword" layoutX="248.0" layoutY="278.0" onAction="#checkBoxAdminPasswordOnAction" text="show password" textFill="WHITE" unCheckedColor="WHITE" />
    <JFXButton ellipsisString="" layoutX="885.0" layoutY="29.0" onAction="#backBtnOnAction" prefHeight="59.0" prefWidth="65.0" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
@@ -119,8 +119,8 @@
          </ImageView>
       </graphic>
    </JFXButton>
-   <Separator layoutX="220.0" layoutY="328.0" prefHeight="4.0" prefWidth="501.0" />
-   <Separator layoutX="491.0" layoutY="184.0" orientation="VERTICAL" prefHeight="88.0" prefWidth="10.0" />
+   <Separator layoutX="110.0" layoutY="333.0" prefHeight="0.0" prefWidth="742.0" />
+   <Separator layoutX="488.0" layoutY="184.0" orientation="VERTICAL" prefHeight="73.0" prefWidth="0.0" />
    <JFXButton fx:id="verifyBtn" layoutX="328.0" layoutY="383.0" onAction="#verifyBtnOnAction" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: blue;" text="verify OTP" textFill="WHITE" visible="false">
       <font>
          <Font name="System Bold" size="10.0" />
