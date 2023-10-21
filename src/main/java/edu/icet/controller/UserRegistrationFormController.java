@@ -1,10 +1,9 @@
 package edu.icet.controller;
 
-import com.jfoenix.controls.JFXComboBox;
-import com.jfoenix.controls.JFXPasswordField;
-import com.jfoenix.controls.JFXTextField;
+import com.jfoenix.controls.*;
 import edu.icet.utill.CrudUtil;
-import edu.icet.entity.User;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -12,19 +11,19 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.layout.Background;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.net.URL;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.Properties;
 import java.util.Random;
 import java.util.ResourceBundle;
+import java.util.concurrent.atomic.AtomicReference;
 
 public class UserRegistrationFormController implements Initializable {
     public JFXTextField txtAdminUserName;
@@ -35,12 +34,46 @@ public class UserRegistrationFormController implements Initializable {
     public JFXPasswordField txtAdminPassword;
     public JFXPasswordField txtUserPassword;
     public JFXPasswordField txtConformUserPassword;
+    public JFXButton verifyBtn;
+    public JFXButton btnSend;
+    public JFXCheckBox checkBoxUserPassword;
+    public JFXCheckBox checkBoxAdminPassword;
+    public JFXComboBox cmbUserType;
+    public JFXButton btnCreate;
+    StringProperty variable = new SimpleStringProperty("");
+    StringProperty variable2 = new SimpleStringProperty("");
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        redUserType.getItems().addAll("Admin", "User");
+
+        txtUserPassword.textProperty().bindBidirectional(variable);
+        txtConformUserPassword.textProperty().bindBidirectional(variable2);
+        AtomicReference<String> val1= new AtomicReference<>("");
+        AtomicReference<String> val2= new AtomicReference<>("");
+        variable.addListener((observable, oldValue, newValue) -> {
+            val1.set(newValue);
+            conformPassword(val1,val2);
+        });
+        variable2.addListener((observable, oldValue, newValue) -> {
+            val2.set(newValue);
+            conformPassword(val1,val2);
+        });
+        conformPassword(val1,val2);
+        cmbUserType.getItems().addAll("Admin", "User");
+        System.out.println(txtAdminUserName.getText());
 
     }
+    public void conformPassword(AtomicReference<String> newValueTxt1, AtomicReference<String> newValueTxt2) {
+        if(txtUserPassword.getText().equals("") && txtConformUserPassword.getText().equals("")){
+            btnCreate.setDisable(true);
+        }else if (newValueTxt1.get().equals(newValueTxt2.get())) {
+            btnCreate.setDisable(false);
+        }else{
+            btnCreate.setDisable(true);
+        }
+    }
+
+
 
     public void backBtnOnAction(ActionEvent actionEvent) {
         try {
@@ -60,6 +93,25 @@ public class UserRegistrationFormController implements Initializable {
     }
 
     public void btnAdminCheckOnAction(ActionEvent actionEvent) {
+
+
+        try {
+            ResultSet resultSet = CrudUtil.execute("SELECT user_name, password FROM user WHERE user_type = 'Admin' AND user_name = ? AND password = ?",
+                    txtAdminUserName.getText(),
+                    txtAdminPassword.getText()
+            );
+            if (resultSet.next()) {
+                new Alert(Alert.AlertType.INFORMATION, "Admin user found.").show();
+                txtUserName.setDisable(false);
+                txtEmail.setDisable(false);
+                txtOtp.setDisable(false);
+                btnSend.setDisable(false);
+            } else {
+                System.out.println("Admin user not found.");
+            }
+        } catch (SQLException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void btnCreateOnAction(ActionEvent actionEvent) {
@@ -103,10 +155,12 @@ public class UserRegistrationFormController implements Initializable {
         return otp;
     }
 
+    char[] otp;
+
     public void sendEmail() {
         String sender = "sharadamarasinha@gmail.com";
         String recipient = txtEmail.getText();
-        char[] otp = getOtp(4);
+        otp = getOtp(4);
         String pw = "nixo ubxy urmo pmkh";
 
         Properties props = new Properties();
@@ -128,12 +182,44 @@ public class UserRegistrationFormController implements Initializable {
             message.setFrom(new InternetAddress(sender));
             message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(recipient));
             message.setSubject("Welcome to clothify store ! this is OTP mail");
-            message.setText(Arrays.toString(otp)+" is your authentication setup code. \n\n hotline : +94779911825");
+            message.setText(Arrays.toString(otp) + " is your authentication setup code. \n\n hotline : +94779911825");
             Transport.send(message);
             new Alert(Alert.AlertType.INFORMATION, "otp has been send please check your email !").show();
             txtOtp.setPromptText("otp has send !");
+            verifyBtn.setVisible(true);
         } catch (MessagingException e) {
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+        }
+    }
+
+    public void verifyBtnOnAction(ActionEvent actionEvent) {
+        String OTP = "";
+        for (char s : otp) {
+            OTP += s;
+        }
+        if (txtOtp.getText().equals(OTP)) {
+            new Alert(Alert.AlertType.INFORMATION, "OTP Matched :)").show();
+            cmbUserType.setDisable(false);
+            txtUserPassword.setDisable(false);
+            txtConformUserPassword.setDisable(false);
+
+        } else {
+            new Alert(Alert.AlertType.ERROR, "invalid OTP :(").show();
+        }
+    }
+
+    public void checkBoxUserPasswordOnAction(ActionEvent actionEvent) {
+        System.out.println("checkBoxUserPasswordOnAction");
+        checkBoxUserPassword.setVisible(true);
+    }
+
+    public void checkBoxAdminPasswordOnAction(ActionEvent actionEvent) {
+        if (checkBoxAdminPassword.isSelected()) {
+            System.out.println("selected");
+            txtAdminPassword.setText(txtAdminPassword.getText());
+
+        } else {
+            System.out.println("un selected");
         }
     }
 }

@@ -15,118 +15,115 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="644.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.UserRegistrationFormController">
-   <children>
-      <ImageView fitHeight="651.0" fitWidth="972.0" layoutY="-1.0" pickOnBounds="true">
-         <image>
-            <Image url="@../img/img-min.jpg" />
-         </image>
-      </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="651.0" layoutX="-1.0" layoutY="-1.0" opacity="0.49" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="972.0">
-         <cursor>
-            <Cursor fx:constant="DEFAULT" />
-         </cursor>
-      </Rectangle>
-      <Label layoutX="91.0" layoutY="38.0" text="User Registration" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="27.0" />
-         </font>
-      </Label>
-      <ImageView fitHeight="56.0" fitWidth="51.0" layoutX="30.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../img/icons8-clothing-store-64.png" />
-         </image>
-      </ImageView>
-      <Rectangle arcHeight="50.0" arcWidth="50.0" height="492.0" layoutX="74.0" layoutY="115.0" opacity="0.49" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="814.0">
-         <cursor>
-            <Cursor fx:constant="DEFAULT" />
-         </cursor>
-      </Rectangle>
-      <Label layoutX="109.0" layoutY="167.0" text="Admin Username" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <JFXTextField fx:id="txtAdminUserName" focusColor="WHITE" layoutX="246.0" layoutY="166.0" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: white;" unFocusColor="#ffaaaa" />
-      <Label layoutX="109.0" layoutY="241.0" text="Admin Password" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="119.0" layoutY="386.0" text="OTP" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <JFXTextField fx:id="txtOtp" focusColor="WHITE" layoutX="216.0" layoutY="383.0" prefHeight="25.0" prefWidth="92.0" style="-fx-background-color: white;" unFocusColor="#ffaaaa" />
-      <Label layoutX="526.0" layoutY="179.0" text="Username" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <JFXTextField fx:id="txtUserName" focusColor="WHITE" layoutX="651.0" layoutY="174.0" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: white;" unFocusColor="#ffaaaa" />
-      <JFXButton layoutX="328.0" layoutY="383.0" onAction="#btnOtpOnAction" prefHeight="25.0" prefWidth="51.0" style="-fx-background-color: #2ecc71;" text="Send" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="10.0" />
-         </font>
-      </JFXButton>
-      <JFXButton layoutX="388.0" layoutY="241.0" onAction="#btnAdminCheckOnAction" prefHeight="25.0" prefWidth="51.0" style="-fx-background-color: #f39c12;" text="Check" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="10.0" />
-         </font>
-      </JFXButton>
-      <JFXButton layoutX="684.0" layoutY="534.0" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #3498db;" text="Back" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font>
-      </JFXButton>
-      <Label layoutX="116.0" layoutY="447.0" text="User Type" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <JFXComboBox fx:id="redUserType" layoutX="216.0" layoutY="446.0" prefHeight="25.0" prefWidth="163.0" style="-fx-background-color: white;" unFocusColor="#ffaaaa" />
-      <Label layoutX="530.0" layoutY="249.0" text="Email" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <JFXTextField fx:id="txtEmail" focusColor="WHITE" layoutX="651.0" layoutY="241.0" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: white;" unFocusColor="#ffaaaa" />
-      <Label layoutX="501.0" layoutY="385.0" text="Password" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="498.0" layoutY="454.0" text="Conform Password" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <JFXButton layoutX="766.0" layoutY="534.0" onAction="#btnCreateOnAction" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #3498db;" text="Create" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font>
-      </JFXButton>
-      <JFXPasswordField fx:id="txtAdminPassword" layoutX="248.0" layoutY="239.0" prefHeight="25.0" prefWidth="122.0" style="-fx-background-color: white;" unFocusColor="#ffaaaa" />
-      <JFXPasswordField fx:id="txtUserPassword" layoutX="644.0" layoutY="384.0" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: white;" unFocusColor="#ffaaaa" />
-      <JFXPasswordField fx:id="txtConformUserPassword" layoutX="645.0" layoutY="447.0" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: white;" unFocusColor="#ffaaaa" />
-      <JFXCheckBox layoutX="733.0" layoutY="486.0" text="show password" textFill="WHITE" unCheckedColor="WHITE" />
-      <JFXCheckBox layoutX="248.0" layoutY="278.0" text="show password" textFill="WHITE" unCheckedColor="WHITE" />
-      <JFXButton ellipsisString="" layoutX="885.0" layoutY="29.0" onAction="#backBtnOnAction" prefHeight="59.0" prefWidth="65.0" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
-         <font>
-            <Font size="1.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <graphic>
-            <ImageView fitHeight="41.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/icons8-back-100.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </JFXButton>
-      <Separator layoutX="220.0" layoutY="328.0" prefHeight="4.0" prefWidth="501.0" />
-      <Separator layoutX="491.0" layoutY="184.0" orientation="VERTICAL" prefHeight="88.0" prefWidth="10.0" />
-   </children>
+   <ImageView fitHeight="651.0" fitWidth="972.0" layoutY="-1.0" pickOnBounds="true">
+      <Image url="@../img/img-min.jpg" />
+   </ImageView>
+   <Rectangle arcHeight="5.0" arcWidth="5.0" height="651.0" layoutX="-1.0" layoutY="-1.0" opacity="0.49" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="972.0">
+      <cursor>
+         <Cursor fx:constant="DEFAULT" />
+      </cursor>
+   </Rectangle>
+   <Label layoutX="91.0" layoutY="38.0" text="User Registration" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="27.0" />
+      </font>
+   </Label>
+   <ImageView fitHeight="56.0" fitWidth="51.0" layoutX="30.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../img/icons8-clothing-store-64.png" />
+   </ImageView>
+   <Rectangle arcHeight="50.0" arcWidth="50.0" height="492.0" layoutX="74.0" layoutY="115.0" opacity="0.49" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="814.0">
+      <cursor>
+         <Cursor fx:constant="DEFAULT" />
+      </cursor>
+   </Rectangle>
+   <Label layoutX="109.0" layoutY="167.0" text="Admin Username" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Label>
+   <JFXTextField fx:id="txtAdminUserName" focusColor="WHITE" layoutX="246.0" layoutY="166.0" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: white;" unFocusColor="#ffaaaa" />
+   <Label layoutX="109.0" layoutY="241.0" text="Admin Password" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Label>
+   <Label layoutX="119.0" layoutY="386.0" text="OTP" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Label>
+   <JFXTextField fx:id="txtOtp" disable="true" focusColor="WHITE" layoutX="216.0" layoutY="383.0" prefHeight="25.0" prefWidth="92.0" style="-fx-background-color: white;" unFocusColor="#ffaaaa" />
+   <Label layoutX="526.0" layoutY="179.0" text="Username" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Label>
+   <JFXTextField fx:id="txtUserName" disable="true" focusColor="WHITE" layoutX="651.0" layoutY="174.0" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: white;" unFocusColor="#ffaaaa" />
+   <JFXButton fx:id="btnSend" disable="true" layoutX="328.0" layoutY="383.0" onAction="#btnOtpOnAction" prefHeight="25.0" prefWidth="51.0" style="-fx-background-color: #2ecc71;" text="Send" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="10.0" />
+      </font>
+   </JFXButton>
+   <JFXButton layoutX="388.0" layoutY="241.0" onAction="#btnAdminCheckOnAction" prefHeight="25.0" prefWidth="51.0" style="-fx-background-color: #f39c12;" text="Check" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="10.0" />
+      </font>
+   </JFXButton>
+   <JFXButton layoutX="684.0" layoutY="534.0" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #3498db;" text="Back" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="15.0" />
+      </font>
+   </JFXButton>
+   <Label layoutX="116.0" layoutY="447.0" text="User Type" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Label>
+   <JFXComboBox fx:id="cmbUserType" disable="true" layoutX="216.0" layoutY="446.0" prefHeight="25.0" prefWidth="163.0" style="-fx-background-color: white;" unFocusColor="#ffaaaa" />
+   <Label layoutX="530.0" layoutY="249.0" text="Email" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Label>
+   <JFXTextField fx:id="txtEmail" disable="true" focusColor="WHITE" layoutX="651.0" layoutY="241.0" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: white;" unFocusColor="#ffaaaa" />
+   <Label layoutX="501.0" layoutY="385.0" text="Password" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Label>
+   <Label layoutX="498.0" layoutY="454.0" text="Conform Password" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Label>
+   <JFXButton fx:id="btnCreate" disable="true" layoutX="766.0" layoutY="534.0" onAction="#btnCreateOnAction" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #3498db;" text="Create" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="15.0" />
+      </font>
+   </JFXButton>
+   <JFXPasswordField fx:id="txtAdminPassword" layoutX="248.0" layoutY="239.0" prefHeight="25.0" prefWidth="122.0" style="-fx-background-color: white;" unFocusColor="#ffaaaa" />
+   <JFXPasswordField fx:id="txtUserPassword" layoutX="644.0" layoutY="384.0" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: white;" unFocusColor="#ffaaaa" />
+   <JFXPasswordField fx:id="txtConformUserPassword" layoutX="645.0" layoutY="447.0" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: white;" unFocusColor="#ffaaaa" />
+   <JFXCheckBox fx:id="checkBoxUserPassword" layoutX="733.0" layoutY="486.0" onAction="#checkBoxUserPasswordOnAction" text="show password" textFill="WHITE" unCheckedColor="WHITE" />
+   <JFXCheckBox fx:id="checkBoxAdminPassword" layoutX="248.0" layoutY="278.0" onAction="#checkBoxAdminPasswordOnAction" text="show password" textFill="WHITE" unCheckedColor="WHITE" />
+   <JFXButton ellipsisString="" layoutX="885.0" layoutY="29.0" onAction="#backBtnOnAction" prefHeight="59.0" prefWidth="65.0" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+      <font>
+         <Font size="1.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+      <graphic>
+         <ImageView fitHeight="41.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../img/icons8-back-100.png" />
+         </ImageView>
+      </graphic>
+   </JFXButton>
+   <Separator layoutX="220.0" layoutY="328.0" prefHeight="4.0" prefWidth="501.0" />
+   <Separator layoutX="491.0" layoutY="184.0" orientation="VERTICAL" prefHeight="88.0" prefWidth="10.0" />
+   <JFXButton fx:id="verifyBtn" layoutX="328.0" layoutY="383.0" onAction="#verifyBtnOnAction" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: blue;" text="verify OTP" textFill="WHITE" visible="false">
+      <font>
+         <Font name="System Bold" size="10.0" />
+      </font>
+   </JFXButton>
 </AnchorPane>
