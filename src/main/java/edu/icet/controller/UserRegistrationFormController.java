@@ -12,10 +12,17 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.layout.Background;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
+import javax.mail.*;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 import java.net.URL;
 import java.sql.SQLException;
+import java.util.Arrays;
+import java.util.Properties;
 import java.util.Random;
 import java.util.ResourceBundle;
 
@@ -65,34 +72,68 @@ public class UserRegistrationFormController implements Initializable {
                         txtUserPassword.getText(),
                         redUserType.getSelectionModel().getSelectedItem().toString()
                 );
-                if (isSaved){
-                    new Alert(Alert.AlertType.INFORMATION,"User Registration Successfully !").show();
-                }else{
-                    new Alert(Alert.AlertType.ERROR,"Something went wrong !").show();
+                if (isSaved) {
+                    new Alert(Alert.AlertType.INFORMATION, "User Registration Successfully !").show();
+                } else {
+                    new Alert(Alert.AlertType.ERROR, "Something went wrong !").show();
 
                 }
             } catch (SQLException | ClassNotFoundException e) {
                 new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
             }
-        }else {
-            new Alert(Alert.AlertType.ERROR,"Please Conformed your password !").show();
+        } else {
+            new Alert(Alert.AlertType.ERROR, "Please Conformed your password !").show();
         }
 
     }
 
 
     public void btnOtpOnAction(ActionEvent actionEvent) {
-        System.out.println(getOtp(4));
+        sendEmail();
     }
 
-    public char [] getOtp(int len){
-        String numbers ="0123456789";
+    public char[] getOtp(int len) {
+        String numbers = "0123456789";
         Random rNd = new Random();
-        char [] otp = new char[len];
-        for (int i = 0; i <len; i++) {
-            otp[i]=numbers.charAt(rNd.nextInt(numbers.length()));
+        char[] otp = new char[len];
+        for (int i = 0; i < len; i++) {
+            otp[i] = numbers.charAt(rNd.nextInt(numbers.length()));
 
         }
         return otp;
+    }
+
+    public void sendEmail() {
+        String sender = "sharadamarasinha@gmail.com";
+        String recipient = txtEmail.getText();
+        char[] otp = getOtp(4);
+        String pw = "nixo ubxy urmo pmkh";
+
+        Properties props = new Properties();
+        props.put("mail.smtp.host", "smtp.gmail.com");
+        props.put("mail.smtp.port", "587");
+        props.put("mail.smtp.auth", "true");
+        props.put("mail.smtp.starttls.enable", "true");
+
+        Session session = Session.getInstance(props,
+                new javax.mail.Authenticator() {
+                    protected PasswordAuthentication getPasswordAuthentication() {
+                        return new PasswordAuthentication(sender, pw);
+                    }
+                }
+        );
+
+        try {
+            Message message = new MimeMessage(session);
+            message.setFrom(new InternetAddress(sender));
+            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(recipient));
+            message.setSubject("Welcome to clothify store ! this is OTP mail");
+            message.setText(Arrays.toString(otp)+" is your authentication setup code. \n\n hotline : +94779911825");
+            Transport.send(message);
+            new Alert(Alert.AlertType.INFORMATION, "otp has been send please check your email !").show();
+            txtOtp.setPromptText("otp has send !");
+        } catch (MessagingException e) {
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+        }
     }
 }
