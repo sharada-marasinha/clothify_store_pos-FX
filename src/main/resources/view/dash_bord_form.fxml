@@ -13,7 +13,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="LodeFormContent" prefHeight="644.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.DashBordFormController">
+<AnchorPane fx:id="LodeFormContent" prefHeight="644.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.DashBordFormController">
    <children>
       <ImageView fitHeight="286.0" fitWidth="972.0" layoutY="-1.0" pickOnBounds="true">
          <image>
@@ -125,7 +125,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton fx:id="btnReport" contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="830.0" layoutY="163.0" onAction="#btnReportsOnAction" prefHeight="82.0" prefWidth="84.0" style="-fx-background-color: white;" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+      <JFXButton fx:id="btnReport" contentDisplay="CENTER" disable="true" ellipsisString="" graphicTextGap="0.0" layoutX="830.0" layoutY="163.0" onAction="#btnReportsOnAction" prefHeight="82.0" prefWidth="84.0" style="-fx-background-color: white;" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
          <graphic>
             <ImageView fitHeight="70.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -189,7 +189,12 @@
           <NumberAxis side="LEFT" />
         </yAxis>
       </BarChart>
-      <JFXButton ellipsisString="" layoutX="882.0" layoutY="23.0" onAction="#logOutBtnOnAction" prefHeight="59.0" prefWidth="65.0" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+      <Rectangle arcHeight="50.0" arcWidth="50.0" height="66.0" layoutX="637.0" layoutY="26.0" opacity="0.49" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="306.0">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Rectangle>
+      <JFXButton ellipsisString="" layoutX="876.0" layoutY="30.0" onAction="#logOutBtnOnAction" prefHeight="59.0" prefWidth="65.0" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
          <font>
             <Font size="1.0" />
          </font>
@@ -204,7 +209,17 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <Label layoutX="896.0" layoutY="78.0" text="log out" textFill="WHITE">
+      <Label fx:id="lblUserName" layoutX="655.0" layoutY="43.0" text="Hello Sharada" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblUserAType" layoutX="655.0" layoutY="29.0" text="Admin" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblUserEmail" layoutX="656.0" layoutY="69.0" text="sharadamarasinha@gmail.com" textFill="WHITE">
          <font>
             <Font name="System Bold" size="10.0" />
          </font>

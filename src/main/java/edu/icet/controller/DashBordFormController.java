@@ -8,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -18,16 +19,20 @@ import java.util.ResourceBundle;
 public class DashBordFormController implements Initializable {
     public AnchorPane LodeFormContent;
     public JFXButton btnReport;
+    public Label lblUserName;
+    public Label lblUserAType;
+    public Label lblUserEmail;
 
     User user;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        if (user.getUser_type().equals("User")) {
-            btnReport.setDisable(true);
-            System.out.println(user);
-        } else {
+        lblUserEmail.setText(user.getEmail());
+        lblUserName.setText("Hello' "+user.getUser_name());
+        lblUserAType.setText(user.getUser_type());
+        if (user.getUser_type().equals("Admin")) {
             btnReport.setDisable(false);
+            System.out.println(user);
         }
     }
 
