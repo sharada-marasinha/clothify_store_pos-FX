@@ -13,7 +13,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="LodeFormContent" prefHeight="644.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.DashBordFormController">
+<AnchorPane fx:id="LodeFormContent" prefHeight="644.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.DashBordFormController">
    <children>
       <ImageView fitHeight="286.0" fitWidth="972.0" layoutY="-1.0" pickOnBounds="true">
          <image>
@@ -125,7 +125,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="830.0" layoutY="163.0" onAction="#btnReportsOnAction" prefHeight="82.0" prefWidth="84.0" style="-fx-background-color: white;" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+      <JFXButton fx:id="btnReport" contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="830.0" layoutY="163.0" onAction="#btnReportsOnAction" prefHeight="82.0" prefWidth="84.0" style="-fx-background-color: white;" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
          <graphic>
             <ImageView fitHeight="70.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
                <image>

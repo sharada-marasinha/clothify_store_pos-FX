@@ -105,7 +105,7 @@ public class UserRegistrationFormController implements Initializable {
                 txtOtp.setDisable(false);
                 btnSend.setDisable(false);
             } else {
-                new Alert(Alert.AlertType.INFORMATION, "Admin user not found !").show();
+                new Alert(Alert.AlertType.ERROR, "Admin user not found !").show();
             }
         } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);

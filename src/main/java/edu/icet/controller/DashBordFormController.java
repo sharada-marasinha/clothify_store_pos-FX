@@ -1,7 +1,10 @@
 package edu.icet.controller;
 
+import com.jfoenix.controls.JFXButton;
+import edu.icet.entity.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -10,9 +13,29 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ResourceBundle;
 
-public class DashBordFormController {
+public class DashBordFormController implements Initializable {
     public AnchorPane LodeFormContent;
+    public JFXButton btnReport;
+
+    User user;
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        if (user.getUser_type().equals("User")) {
+            btnReport.setDisable(true);
+            System.out.println(user);
+        } else {
+            btnReport.setDisable(false);
+        }
+    }
+
+    DashBordFormController(User user) {
+        this.user = user;
+
+        System.out.println(user);
+    }
 
     public void btnOrderOnAction(ActionEvent actionEvent) throws IOException {
         URL resource = this.getClass().getResource("/view/place_order_form.fxml");
@@ -101,4 +124,6 @@ public class DashBordFormController {
         this.LodeFormContent.getChildren().clear();
         this.LodeFormContent.getChildren().add(load);
     }
+
+
 }
