@@ -1,6 +1,8 @@
 package edu.icet.controller;
 
 import com.jfoenix.controls.JFXTextField;
+import edu.icet.dao.DaoFactory;
+import edu.icet.dao.custom.EmployeeDao;
 import edu.icet.entity.Employee;
 import edu.icet.utill.CrudUtil;
 import javafx.collections.FXCollections;
@@ -40,6 +42,8 @@ public class EmployeeRegistrationFormController implements Initializable {
     public DatePicker dEmpDate;
     public ComboBox cmbTitle;
 
+    EmployeeDao employeeDao = DaoFactory.getDaoFactory().getDaoType(DaoFactory.DaoType.EMPLOYEE);
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
             empColId.setCellValueFactory(new PropertyValueFactory<>("empId"));
@@ -65,6 +69,7 @@ public class EmployeeRegistrationFormController implements Initializable {
     }
 
     public void btnSaveOnAction(ActionEvent actionEvent){
+        Employee employee=new Employee();
         try {
             boolean isAdd = CrudUtil.execute("INSERT INTO Employer (title, name, nic, dateOfBirth, address, contactNo, bankAccNo, bankBranch)\n" +
                     "VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
