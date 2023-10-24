@@ -12,7 +12,7 @@ public class PlaceOrderFormController {
     public AnchorPane LodeFormContent;
 
     public void backBtnOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = this.getClass().getResource("/view/dash_bord_form.fxml");
+        URL resource = this.getClass().getResource("view/dash_bord_form.fxml");
 
         assert resource != null;
 

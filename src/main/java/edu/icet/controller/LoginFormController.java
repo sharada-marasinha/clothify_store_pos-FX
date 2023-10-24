@@ -28,7 +28,7 @@ public class LoginFormController {
         if (user!=null){
             try {
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/dash_bord_form.fxml"));
-                fxmlLoader.setControllerFactory(controllerClass -> new DashBordFormController(user));
+              // fxmlLoader.setControllerFactory(controllerClass -> new DashBordFormController(user));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root1));

@@ -27,20 +27,20 @@ public class DashBordFormController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        lblUserEmail.setText(user.getEmail());
-        lblUserName.setText("Hello' "+user.getUser_name());
-        lblUserAType.setText(user.getUser_type());
-        if (user.getUser_type().equals("Admin")) {
-            btnReport.setDisable(false);
-            System.out.println(user);
-        }
+//        lblUserEmail.setText(user.getEmail());
+//        lblUserName.setText("Hello' "+user.getUser_name());
+//        lblUserAType.setText(user.getUser_type());
+//        if (user.getUser_type().equals("Admin")) {
+//            btnReport.setDisable(false);
+//            System.out.println(user);
+//        }
     }
-
-    DashBordFormController(User user) {
-        this.user = user;
-
-        System.out.println(user);
-    }
+//    DashBordFormController(){}
+//    DashBordFormController(User user) {
+//        this.user = user;
+//
+//        System.out.println(user);
+//    }
 
     public void btnOrderOnAction(ActionEvent actionEvent) throws IOException {
         URL resource = this.getClass().getResource("/view/place_order_form.fxml");

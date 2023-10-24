@@ -12,6 +12,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
+import org.mindrot.jbcrypt.BCrypt;
 
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
@@ -114,12 +115,13 @@ public class UserRegistrationFormController implements Initializable {
 
     public void btnCreateOnAction(ActionEvent actionEvent) {
         if (txtUserPassword.getText().equals(txtConformUserPassword.getText())) {
+            String hashPw = BCrypt.hashpw(txtUserPassword.getText(), BCrypt.gensalt(12));
             try {
                 boolean isSaved = CrudUtil.execute(
                         "INSERT INTO User (user_name, email, password, user_type) VALUES (?, ?, ?, ?)",
                         txtUserName.getText(),
                         txtEmail.getText(),
-                        txtUserPassword.getText(),
+                        hashPw,
                         cmbUserType.getSelectionModel().getSelectedItem().toString()
                 );
                 if (isSaved) {
