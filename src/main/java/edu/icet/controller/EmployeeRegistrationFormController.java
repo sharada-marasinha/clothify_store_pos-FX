@@ -3,6 +3,8 @@ package edu.icet.controller;
 import com.jfoenix.controls.JFXTextField;
 import edu.icet.dao.DaoFactory;
 import edu.icet.dao.custom.EmployeeDao;
+import edu.icet.dto.EmployeeDto;
+import edu.icet.dto.tm.EmployeeTM;
 import edu.icet.entity.Employee;
 import edu.icet.utill.CrudUtil;
 import javafx.collections.FXCollections;
@@ -19,6 +21,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class EmployeeRegistrationFormController implements Initializable {
@@ -27,7 +30,7 @@ public class EmployeeRegistrationFormController implements Initializable {
     public JFXTextField txtEmpName;
     public JFXTextField txtEmpNic;
     public JFXTextField txtEmpAddress;
-    public TableView empTable;
+    public TableView <EmployeeTM> empTable;
     public TableColumn empColId;
     public TableColumn empColName;
     public TableColumn empColNic;
@@ -69,25 +72,23 @@ public class EmployeeRegistrationFormController implements Initializable {
     }
 
     public void btnSaveOnAction(ActionEvent actionEvent){
-        Employee employee=new Employee();
+        EmployeeDto employee=new EmployeeDto(
+                cmbTitle.getSelectionModel().getSelectedItem().toString(),
+                txtEmpName.getText(),
+                txtEmpNic.getText(),
+                dEmpDate.getValue().toString(),
+                txtEmpAddress.getText(),
+                txtEmpContact.getText(),
+                txtEmpBankAcc.getText(),
+                txtEmpBankBranch.getText()
+        );
         try {
-            boolean isAdd = CrudUtil.execute("INSERT INTO Employer (title, name, nic, dateOfBirth, address, contactNo, bankAccNo, bankBranch)\n" +
-                    "VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
-                    cmbTitle.getSelectionModel().getSelectedItem().toString(),
-                    txtEmpName.getText(),
-                    txtEmpNic.getText(),
-                    dEmpDate.getValue().toString(),
-                    txtEmpAddress.getText(),
-                    txtEmpContact.getText(),
-                    txtEmpBankAcc.getText(),
-                    txtEmpBankBranch.getText()
-                    );
+            boolean isAdd = employeeDao.save(employee);
             if (isAdd){
                 new Alert(Alert.AlertType.INFORMATION,"Employer Add Successfully !").show();
                 loadTable();
             }else{
                 new Alert(Alert.AlertType.ERROR,"Something went wrong !").show();
-
             }
         } catch (SQLException | ClassNotFoundException e) {
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
@@ -98,27 +99,14 @@ public class EmployeeRegistrationFormController implements Initializable {
     }
 
     public void loadTable(){
-        ObservableList<Employee> list = FXCollections.observableArrayList();
+
         try {
-            ResultSet rst = CrudUtil.execute("SELECT * FROM Employer");
-            while (rst.next()) {
+            ObservableList <EmployeeTM> all = employeeDao.findAll();
 
-                list.add(new Employee(
-                        rst.getInt(1),
-                        rst.getString(2),
-                        rst.getString(3),
-                        rst.getString(4),
-                        rst.getString(5),
-                        rst.getString(6),
-                        rst.getString(7),
-                        rst.getString(8),
-                        rst.getString(9)
-                ));
-            }
-
-            empTable.setItems(list);
+            empTable.setItems(all);
         } catch (SQLException | ClassNotFoundException e) {
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+            e.printStackTrace();
         }
     }
 

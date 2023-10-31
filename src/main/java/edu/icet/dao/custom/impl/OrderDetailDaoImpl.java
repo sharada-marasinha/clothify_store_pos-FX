@@ -1,19 +1,19 @@
 package edu.icet.dao.custom.impl;
 
-import edu.icet.dao.custom.ItemDao;
-import edu.icet.dto.ItemDto;
-import edu.icet.dto.tm.ItemTM;
+import edu.icet.dao.custom.OrderDetailDao;
+import edu.icet.dto.OrderDetailDto;
+import edu.icet.dto.tm.OrderDetailTM;
 
 import java.util.List;
 
-public class ItemDaoImpl implements ItemDao {
+public class OrderDetailDaoImpl implements OrderDetailDao {
     @Override
-    public boolean save(ItemDto dto) {
+    public boolean save(OrderDetailDto dto) {
         return false;
     }
 
     @Override
-    public boolean update(ItemDto dto) {
+    public boolean update(OrderDetailDto dto) {
         return false;
     }
 
@@ -23,7 +23,7 @@ public class ItemDaoImpl implements ItemDao {
     }
 
     @Override
-    public List<ItemTM> findAll() {
+    public List<OrderDetailTM> findAll() {
         return null;
     }
 
@@ -33,7 +33,7 @@ public class ItemDaoImpl implements ItemDao {
     }
 
     @Override
-    public ItemDto find(Integer integer) {
+    public OrderDetailDto find(Integer integer) {
         return null;
     }
 }

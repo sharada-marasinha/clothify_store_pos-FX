@@ -1,14 +1,16 @@
-package edu.icet.dto;
+package edu.icet.dto.tm;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-@ToString
-public class EmployeeDto {
-
+public class EmployeeTM {
+    private Integer empId;
     private String title;
     private String name;
     private String nic;
