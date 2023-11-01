@@ -96,6 +96,15 @@ public class EmployeeRegistrationFormController implements Initializable {
     }
 
     public void btnClearOnAction(ActionEvent actionEvent) {
+        txtEmpName.setText("");
+        txtEmpAddress.setText("");
+        txtEmpBankAcc.setText("");
+        txtEmpId.setText("");
+        txtEmpContact.setText("");
+        txtEmpNic.setText("");
+        txtEmpBankBranch.setText("");
+       // cmbTitle.cancelEdit();
+
     }
 
     public void loadTable(){
@@ -110,5 +119,27 @@ public class EmployeeRegistrationFormController implements Initializable {
         }
     }
 
+    public void btnUpdateOnAction(ActionEvent actionEvent) {
+    }
 
+    public void btnDeleteOnAction(ActionEvent actionEvent) {
+
+    }
+
+    public void txtIdSearchOnAction(ActionEvent actionEvent) {
+        try {
+            EmployeeDto employeeDto=employeeDao.find(Integer.valueOf(txtEmpId.getText()));
+            txtEmpName.setText(employeeDto.getName());
+            txtEmpNic.setText(employeeDto.getNic());
+            txtEmpAddress.setText(employeeDto.getAddress());
+            txtEmpContact.setText(employeeDto.getContact());
+            txtEmpBankAcc.setText(employeeDto.getBankAccountNo());
+            txtEmpBankBranch.setText(employeeDto.getBankBranch());
+            System.out.println(employeeDto);
+            //cmbTitle.setItems(employeeDto.getTitle());
+
+        } catch (SQLException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

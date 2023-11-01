@@ -14,7 +14,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="LodeFormContent" prefHeight="644.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.EmployeeRegistrationFormController">
+<AnchorPane fx:id="LodeFormContent" prefHeight="644.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.EmployeeRegistrationFormController">
    <children>
       <ImageView fitHeight="651.0" fitWidth="972.0" layoutY="-1.0" pickOnBounds="true">
          <image>
@@ -46,7 +46,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtEmpId" editable="false" focusColor="WHITE" layoutX="223.0" layoutY="147.0" prefHeight="25.0" prefWidth="93.0" promptText="id" style="-fx-background-color: white;" unFocusColor="#ffaaaa" />
+      <JFXTextField fx:id="txtEmpId" focusColor="WHITE" layoutX="223.0" layoutY="147.0" onAction="#txtIdSearchOnAction" prefHeight="25.0" prefWidth="93.0" promptText="id" style="-fx-background-color: white;" unFocusColor="#ffaaaa" />
       <Label layoutX="122.0" layoutY="196.0" text="Name" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
@@ -101,12 +101,12 @@
       </Label>
       <JFXTextField fx:id="txtEmpBankBranch" focusColor="WHITE" layoutX="645.0" layoutY="287.0" prefHeight="25.0" prefWidth="195.0" promptText="Bank Branch" style="-fx-background-color: white;" unFocusColor="#ffaaaa" />
       <DatePicker fx:id="dEmpDate" layoutX="645.0" layoutY="152.0" prefHeight="25.0" prefWidth="195.0" promptText="date" />
-      <JFXButton layoutX="767.0" layoutY="331.0" onAction="#btnSaveOnAction" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #2ecc71;" text="Save" textFill="WHITE">
+      <JFXButton layoutX="767.0" layoutY="331.0" onAction="#btnSaveOnAction" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: green;" text="Save" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="680.0" layoutY="331.0" onAction="#btnClearOnAction" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #f39c12;" text="Clear" textFill="WHITE">
+      <JFXButton layoutX="683.0" layoutY="331.0" onAction="#btnUpdateOnAction" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: blue;" text="Update" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
@@ -132,5 +132,15 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
+      <JFXButton layoutX="598.0" layoutY="331.0" onAction="#btnDeleteOnAction" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: red;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="512.0" layoutY="330.0" onAction="#btnClearOnAction" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #f39c12;" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>

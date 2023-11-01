@@ -65,7 +65,18 @@ public class EmployeeDaoImpl implements EmployeeDao {
     }
 
     @Override
-    public EmployeeDto find(Integer integer) {
-        return null;
+    public EmployeeDto find(Integer integer) throws SQLException, ClassNotFoundException {
+      ResultSet rst = CrudUtil.execute("select * from employer where id = ?",integer);
+      rst.next();
+      return new EmployeeDto(
+              rst.getString(2),
+              rst.getString(3),
+              rst.getString(4),
+              rst.getString(5),
+              rst.getString(6),
+              rst.getString(7),
+              rst.getString(8),
+              rst.getString(9)
+      );
     }
 }
