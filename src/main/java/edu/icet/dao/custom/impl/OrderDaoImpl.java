@@ -13,7 +13,7 @@ public class OrderDaoImpl implements OrderDao {
     }
 
     @Override
-    public boolean update(OrderDto dto) {
+    public boolean update(OrderDto dto , Integer Id) {
         return false;
     }
 

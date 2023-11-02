@@ -94,11 +94,11 @@ public class EmployeeRegistrationFormController implements Initializable {
 
     public void btnSaveOnAction(ActionEvent actionEvent){
         EmployeeDto employee=new EmployeeDto(
-                cmbTitle.getSelectionModel().getSelectedItem().toString(),
                 txtEmpName.getText(),
+                cmbTitle.getSelectionModel().getSelectedItem().toString(),
                 txtEmpNic.getText(),
-                dEmpDate.getValue().toString(),
                 txtEmpAddress.getText(),
+                dEmpDate.getValue().toString(),
                 txtEmpContact.getText(),
                 txtEmpBankAcc.getText(),
                 txtEmpBankBranch.getText()
@@ -133,7 +133,6 @@ public class EmployeeRegistrationFormController implements Initializable {
 
         try {
             ObservableList <EmployeeTM> all = employeeDao.findAll();
-
             empTable.setItems(all);
         } catch (SQLException | ClassNotFoundException e) {
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
@@ -142,6 +141,27 @@ public class EmployeeRegistrationFormController implements Initializable {
     }
 
     public void btnUpdateOnAction(ActionEvent actionEvent) {
+        EmployeeDto employee=new EmployeeDto(
+                txtEmpName.getText(),
+                cmbTitle.getSelectionModel().getSelectedItem().toString(),
+                txtEmpNic.getText(),
+                txtEmpAddress.getText(),
+                dEmpDate.getValue().toString(),
+                txtEmpContact.getText(),
+                txtEmpBankAcc.getText(),
+                txtEmpBankBranch.getText()
+        );
+        try {
+            boolean isUpdate = employeeDao.update(employee, Integer.valueOf(txtEmpId.getText()));
+            if(isUpdate){
+                new Alert(Alert.AlertType.INFORMATION,"Employer Update Successfully !").show();
+                loadTable();
+            }else {
+                new Alert(Alert.AlertType.ERROR,"Something went wrong !").show();
+            }
+        } catch (SQLException | ClassNotFoundException e) {
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+        }
     }
 
     public void btnDeleteOnAction(ActionEvent actionEvent) {

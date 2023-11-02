@@ -29,8 +29,18 @@ public class EmployeeDaoImpl implements EmployeeDao {
     }
 
     @Override
-    public boolean update(EmployeeDto dto) {
-        return false;
+    public boolean update(EmployeeDto employee,Integer id) throws SQLException, ClassNotFoundException {
+        return CrudUtil.execute("UPDATE Employer set  title=?,name=?,nic=?,dateOfBirth=?,address=?,contactNo=?,bankAccNo=?,bankBranch=? WHERE id=?",
+                employee.getTitle(),
+                employee.getName(),
+                employee.getNic(),
+                employee.getDob(),
+                employee.getAddress(),
+                employee.getContact(),
+                employee.getBankAccountNo(),
+                employee.getBankBranch(),
+                id
+        );
     }
 
     @Override

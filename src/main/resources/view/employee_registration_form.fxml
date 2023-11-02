@@ -36,7 +36,7 @@
             <Image url="@../img/icons8-clothing-store-64.png" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="50.0" arcWidth="50.0" height="492.0" layoutX="79.0" layoutY="115.0" opacity="0.49" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="814.0">
+      <Rectangle arcHeight="50.0" arcWidth="50.0" height="511.0" layoutX="35.0" layoutY="115.0" opacity="0.49" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="899.0">
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor>
@@ -65,16 +65,16 @@
          </font>
       </Label>
       <JFXTextField fx:id="txtEmpAddress" focusColor="WHITE" layoutX="226.0" layoutY="324.0" prefHeight="25.0" prefWidth="195.0" promptText="address" style="-fx-background-color: white;" unFocusColor="#ffaaaa" />
-      <TableView fx:id="empTable" layoutX="128.0" layoutY="375.0" prefHeight="200.0" prefWidth="715.0" styleClass="dashboard-colour2" stylesheets="@../css/Table.css">
+      <TableView fx:id="empTable" layoutX="67.0" layoutY="375.0" prefHeight="229.0" prefWidth="844.0" styleClass="dashboard-colour2" stylesheets="@../css/Table.css">
         <columns>
           <TableColumn fx:id="empColId" prefWidth="75.0" text="ID" />
           <TableColumn fx:id="empColName" prefWidth="75.0" text="Name" />
-            <TableColumn fx:id="empColNic" prefWidth="75.0" text="NIC" />
-            <TableColumn fx:id="empColAddress" prefWidth="90.0" text="Address" />
-            <TableColumn fx:id="empColDob" prefWidth="97.0" text="Date of Birth" />
-            <TableColumn fx:id="empColContact" prefWidth="81.0" text="Contact" />
-            <TableColumn fx:id="empColBAccNo" prefWidth="115.0" text="Bank Account No" />
-            <TableColumn fx:id="empColBankBranch" prefWidth="106.0" text="Bank Branch" />
+            <TableColumn fx:id="empColNic" prefWidth="107.0" text="NIC" />
+            <TableColumn fx:id="empColAddress" prefWidth="98.0" text="Address" />
+            <TableColumn fx:id="empColDob" prefWidth="115.0" text="Date of Birth" />
+            <TableColumn fx:id="empColContact" prefWidth="127.0" text="Contact" />
+            <TableColumn fx:id="empColBAccNo" minWidth="8.0" prefWidth="130.0" text="Bank Account No" />
+            <TableColumn fx:id="empColBankBranch" prefWidth="116.0" text="Bank Branch" />
         </columns>
       </TableView>
       <Label layoutX="511.0" layoutY="155.0" text="Date of Birth" textFill="WHITE">

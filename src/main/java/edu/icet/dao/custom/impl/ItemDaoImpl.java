@@ -13,7 +13,7 @@ public class ItemDaoImpl implements ItemDao {
     }
 
     @Override
-    public boolean update(ItemDto dto) {
+    public boolean update(ItemDto dto, Integer id) {
         return false;
     }
 

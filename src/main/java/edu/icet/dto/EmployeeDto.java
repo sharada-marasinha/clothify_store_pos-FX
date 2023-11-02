@@ -8,12 +8,12 @@ import lombok.*;
 @Setter
 @ToString
 public class EmployeeDto {
-    private String title;
     private String name;
+    private String title;
     private String nic;
+    private String address;
     private String dob;
+    private String contact;
     private String bankAccountNo;
     private String bankBranch;
-    private String contact;
-    private String address;
 }
