@@ -21,6 +21,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -59,6 +61,25 @@ public class EmployeeRegistrationFormController implements Initializable {
             empColBankBranch.setCellValueFactory(new PropertyValueFactory<>("bankBranch"));
             cmbTitle.getItems().addAll("Mr","Ms","Mrs");
         loadTable();
+        empTable.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            if (null != newValue) {
+                setTableValuesToTxt(newValue);
+            }
+        });
+    }
+
+    private void setTableValuesToTxt(EmployeeTM newValue) {
+        txtEmpId.setText(String.valueOf(newValue.getEmpId()));
+        txtEmpName.setText(newValue.getName());
+        txtEmpNic.setText(newValue.getNic());
+        txtEmpAddress.setText(newValue.getAddress());
+        txtEmpContact.setText(newValue.getContact());
+        txtEmpBankAcc.setText(newValue.getBankAccountNo());
+        txtEmpBankBranch.setText(newValue.getBankBranch());
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate initialDate = LocalDate.parse(newValue.getDob(), formatter);
+        dEmpDate.setValue(initialDate);
+        cmbTitle.getSelectionModel().select(newValue.getTitle());
     }
 
     public void backBtnOnAction(ActionEvent actionEvent) throws IOException {
@@ -103,7 +124,8 @@ public class EmployeeRegistrationFormController implements Initializable {
         txtEmpContact.setText("");
         txtEmpNic.setText("");
         txtEmpBankBranch.setText("");
-       // cmbTitle.cancelEdit();
+        dEmpDate.setValue(null);
+        cmbTitle.setValue(null);
 
     }
 
@@ -135,11 +157,13 @@ public class EmployeeRegistrationFormController implements Initializable {
             txtEmpContact.setText(employeeDto.getContact());
             txtEmpBankAcc.setText(employeeDto.getBankAccountNo());
             txtEmpBankBranch.setText(employeeDto.getBankBranch());
-            System.out.println(employeeDto);
-            //cmbTitle.setItems(employeeDto.getTitle());
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+            LocalDate initialDate = LocalDate.parse(employeeDto.getDob(), formatter);
+            dEmpDate.setValue(initialDate);
+            cmbTitle.getSelectionModel().select(employeeDto.getTitle());
 
         } catch (SQLException | ClassNotFoundException e) {
-            throw new RuntimeException(e);
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
         }
     }
 }
