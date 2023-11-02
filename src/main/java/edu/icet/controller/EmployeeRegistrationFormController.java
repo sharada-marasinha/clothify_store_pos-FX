@@ -145,7 +145,19 @@ public class EmployeeRegistrationFormController implements Initializable {
     }
 
     public void btnDeleteOnAction(ActionEvent actionEvent) {
+        try {
+            boolean delete = employeeDao.delete(Integer.valueOf(txtEmpId.getText()));
+            if(delete){
+                new Alert(Alert.AlertType.INFORMATION,"Employer DELETE Successfully !").show();
+                loadTable();
+                btnClearOnAction( actionEvent);
+            }else {
+                new Alert(Alert.AlertType.ERROR,"Something went wrong !").show();
+            }
 
+        } catch (SQLException | ClassNotFoundException e) {
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+        }
     }
 
     public void txtIdSearchOnAction(ActionEvent actionEvent) {

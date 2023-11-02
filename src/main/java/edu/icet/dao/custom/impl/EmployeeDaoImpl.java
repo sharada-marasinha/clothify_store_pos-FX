@@ -34,8 +34,8 @@ public class EmployeeDaoImpl implements EmployeeDao {
     }
 
     @Override
-    public boolean delete(Integer integer) {
-        return false;
+    public boolean delete(Integer id) throws SQLException, ClassNotFoundException {
+        return CrudUtil.execute("DELETE FROM Employer WHERE id = ?",id);
     }
 
     @Override
