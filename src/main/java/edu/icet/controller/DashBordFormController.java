@@ -2,6 +2,9 @@ package edu.icet.controller;
 
 import com.jfoenix.controls.JFXButton;
 import edu.icet.entity.User;
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -11,9 +14,13 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.io.IOException;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.time.LocalTime;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 public class DashBordFormController implements Initializable {
@@ -22,11 +29,14 @@ public class DashBordFormController implements Initializable {
     public Label lblUserName;
     public Label lblUserAType;
     public Label lblUserEmail;
+    public Label lblDate;
+    public Label lblTime;
 
     User user;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        loadDateAndTime();
 //        lblUserEmail.setText(user.getEmail());
 //        lblUserName.setText("Hello' "+user.getUser_name());
 //        lblUserAType.setText(user.getUser_type());
@@ -129,6 +139,25 @@ public class DashBordFormController implements Initializable {
         this.LodeFormContent.getChildren().clear();
         this.LodeFormContent.getChildren().add(load);
     }
+    Date date;
+    private void loadDateAndTime() {
+        date = new Date();
+        SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd");
+        lblDate.setText(f.format(date));
+
+        Timeline time = new Timeline(new KeyFrame(Duration.ZERO, e -> {
+            LocalTime cTime = LocalTime.now();
+            lblTime.setText(
+                    cTime.getHour() + ":" + cTime.getMinute() + ":" + cTime.getSecond()
+            );
+        }),
+                new KeyFrame(Duration.seconds(1))
+        );
+        time.setCycleCount(Animation.INDEFINITE);
+        time.play();
+
+    }
+
 
 
 }

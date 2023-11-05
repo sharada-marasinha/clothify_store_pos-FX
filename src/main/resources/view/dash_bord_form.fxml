@@ -2,186 +2,192 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
 <?import javafx.scene.chart.BarChart?>
 <?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="LodeFormContent" prefHeight="644.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.DashBordFormController">
+<AnchorPane fx:id="LodeFormContent" prefHeight="668.0" prefWidth="1190.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.DashBordFormController">
    <children>
-      <ImageView fitHeight="286.0" fitWidth="972.0" layoutY="-1.0" pickOnBounds="true">
+      <ImageView fitHeight="668.0" fitWidth="1190.0" pickOnBounds="true">
          <image>
             <Image url="@../img/img-min.jpg" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="286.0" layoutX="-1.0" layoutY="-1.0" opacity="0.49" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="972.0">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="293.0" layoutX="-1.0" layoutY="-1.0" opacity="0.62" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1190.0">
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </Rectangle>
       <Label layoutX="91.0" layoutY="43.0" text="Clothify Store" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="27.0" />
+            <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <ImageView fitHeight="56.0" fitWidth="51.0" layoutX="30.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="56.0" fitWidth="51.0" layoutX="30.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/icons8-clothing-store-64.png" />
          </image>
       </ImageView>
-      <JFXButton contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="54.0" layoutY="163.0" onAction="#btnOrderOnAction" prefHeight="82.0" prefWidth="84.0" style="-fx-background-color: white;" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
-         <graphic>
-            <ImageView fitHeight="70.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/icons8-supplies-64.png" />
-               </image>
-            </ImageView>
-         </graphic>
-         <font>
-            <Font size="1.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </JFXButton>
-      <JFXButton contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="183.0" layoutY="163.0" onAction="#btnItemOnAction" prefHeight="82.0" prefWidth="84.0" style="-fx-background-color: white;" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
-         <graphic>
-            <ImageView fitHeight="70.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/icons8-vegan-clothing-50.png" />
-               </image>
-            </ImageView>
-         </graphic>
-         <font>
-            <Font size="1.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </JFXButton>
-      <JFXButton contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="313.0" layoutY="163.0" onAction="#btnEmployeeOnAction" prefHeight="82.0" prefWidth="84.0" style="-fx-background-color: white;" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
-         <graphic>
-            <ImageView fitHeight="70.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/icons8-employee-50.png" />
-               </image>
-            </ImageView>
-         </graphic>
-         <font>
-            <Font size="1.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </JFXButton>
-      <JFXButton contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="444.0" layoutY="163.0" onAction="#btnSupplierOnAction" prefHeight="82.0" prefWidth="84.0" style="-fx-background-color: white;" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
-         <graphic>
-            <ImageView fitHeight="70.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/icons8-supplier-50.png" />
-               </image>
-            </ImageView>
-         </graphic>
-         <font>
-            <Font size="1.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </JFXButton>
-      <JFXButton contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="570.0" layoutY="163.0" onAction="#btnOrderDetailsOnAction" prefHeight="82.0" prefWidth="84.0" style="-fx-background-color: white;" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
-         <graphic>
-            <ImageView fitHeight="70.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/icons8-order-50.png" />
-               </image>
-            </ImageView>
-         </graphic>
-         <font>
-            <Font size="1.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </JFXButton>
-      <JFXButton contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="700.0" layoutY="163.0" onAction="#btnSalesReturnOnAction" prefHeight="82.0" prefWidth="84.0" style="-fx-background-color: white;" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
-         <graphic>
-            <ImageView fitHeight="70.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/icons8-return-50.png" />
-               </image>
-            </ImageView>
-         </graphic>
-         <font>
-            <Font size="1.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </JFXButton>
-      <JFXButton fx:id="btnReport" contentDisplay="CENTER" disable="true" ellipsisString="" graphicTextGap="0.0" layoutX="830.0" layoutY="163.0" onAction="#btnReportsOnAction" prefHeight="82.0" prefWidth="84.0" style="-fx-background-color: white;" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
-         <graphic>
-            <ImageView fitHeight="70.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/icons8-sales-growth-64.png" />
-               </image>
-            </ImageView>
-         </graphic>
-         <font>
-            <Font size="1.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </JFXButton>
-      <Label layoutX="78.0" layoutY="137.0" text="Order" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="206.0" layoutY="137.0" text="Items" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="321.0" layoutY="137.0" text="Employee" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="457.0" layoutY="137.0" text="Supplier" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="568.0" layoutY="137.0" text="Order Details" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="701.0" layoutY="137.0" text="Sales Return" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="843.0" layoutY="137.0" text="Reports" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="309.0" layoutX="-1.0" layoutY="308.0" opacity="0.49" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="972.0">
+      <Group layoutX="158.0" layoutY="142.0">
+         <children>
+            <JFXButton contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" layoutY="26.0" onAction="#btnOrderOnAction" prefHeight="82.0" prefWidth="84.0" style="-fx-background-color: white;" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+               <graphic>
+                  <ImageView fitHeight="70.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-supplies-64.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="129.0" layoutY="26.0" onAction="#btnItemOnAction" prefHeight="82.0" prefWidth="84.0" style="-fx-background-color: white;" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+               <graphic>
+                  <ImageView fitHeight="70.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-vegan-clothing-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="259.0" layoutY="26.0" onAction="#btnEmployeeOnAction" prefHeight="82.0" prefWidth="84.0" style="-fx-background-color: white;" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+               <graphic>
+                  <ImageView fitHeight="70.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-employee-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="390.0" layoutY="26.0" onAction="#btnSupplierOnAction" prefHeight="82.0" prefWidth="84.0" style="-fx-background-color: white;" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+               <graphic>
+                  <ImageView fitHeight="70.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-supplier-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="516.0" layoutY="26.0" onAction="#btnOrderDetailsOnAction" prefHeight="82.0" prefWidth="84.0" style="-fx-background-color: white;" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+               <graphic>
+                  <ImageView fitHeight="70.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-order-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="646.0" layoutY="26.0" onAction="#btnSalesReturnOnAction" prefHeight="82.0" prefWidth="84.0" style="-fx-background-color: white;" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+               <graphic>
+                  <ImageView fitHeight="70.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-return-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnReport" contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="776.0" layoutY="26.0" onAction="#btnReportsOnAction" prefHeight="82.0" prefWidth="84.0" style="-fx-background-color: white;" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+               <graphic>
+                  <ImageView fitHeight="70.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-sales-growth-64.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label layoutX="24.0" text="Order" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="152.0" text="Items" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="267.0" text="Employee" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="403.0" text="Supplier" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="514.0" text="Order Details" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="647.0" text="Sales Return" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="789.0" text="Reports" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Group>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" height="338.0" layoutX="34.0" layoutY="311.0" opacity="0.6" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1120.0">
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </Rectangle>
-      <PieChart layoutX="35.0" layoutY="319.0" prefHeight="286.0" prefWidth="334.0" />
-      <BarChart layoutX="439.0" layoutY="314.0" prefHeight="309.0" prefWidth="507.0">
+      <PieChart layoutX="76.0" layoutY="334.0" prefHeight="286.0" prefWidth="334.0" />
+      <BarChart layoutX="616.0" layoutY="309.0" prefHeight="338.0" prefWidth="507.0">
         <xAxis>
           <CategoryAxis side="BOTTOM" />
         </xAxis>
@@ -189,12 +195,12 @@
           <NumberAxis side="LEFT" />
         </yAxis>
       </BarChart>
-      <Rectangle arcHeight="50.0" arcWidth="50.0" height="66.0" layoutX="637.0" layoutY="26.0" opacity="0.49" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="306.0">
+      <Rectangle arcHeight="50.0" arcWidth="50.0" height="66.0" layoutX="562.0" layoutY="38.0" opacity="0.49" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="589.0">
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </Rectangle>
-      <JFXButton ellipsisString="" layoutX="876.0" layoutY="30.0" onAction="#logOutBtnOnAction" prefHeight="59.0" prefWidth="65.0" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+      <JFXButton ellipsisString="" layoutX="1084.0" layoutY="42.0" onAction="#logOutBtnOnAction" prefHeight="59.0" prefWidth="65.0" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
          <font>
             <Font size="1.0" />
          </font>
@@ -209,20 +215,32 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <Label fx:id="lblUserName" layoutX="655.0" layoutY="43.0" text="Hello Sharada" textFill="WHITE">
+      <Label fx:id="lblUserName" layoutX="863.0" layoutY="55.0" text="Hello Sharada" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="lblUserAType" layoutX="655.0" layoutY="29.0" text="Admin" textFill="WHITE">
+      <Label fx:id="lblUserAType" layoutX="863.0" layoutY="41.0" text="Admin" textFill="WHITE">
          <font>
             <Font name="System Bold" size="10.0" />
          </font>
       </Label>
-      <Label fx:id="lblUserEmail" layoutX="656.0" layoutY="69.0" text="sharadamarasinha@gmail.com" textFill="WHITE">
+      <Label fx:id="lblUserEmail" layoutX="864.0" layoutY="81.0" text="sharadamarasinha@gmail.com" textFill="WHITE">
          <font>
             <Font name="System Bold" size="10.0" />
          </font>
       </Label>
+      <Label fx:id="lblDate" layoutX="625.0" layoutY="45.0" text="yyyy-DD-mm" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="625.0" layoutY="73.0" text="00.00.00" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Separator layoutX="789.0" layoutY="48.0" orientation="VERTICAL" prefHeight="45.0" prefWidth="0.0" />
+      <JFXButton layoutX="516.0" layoutY="586.0" text="Print Report" textFill="WHITE" />
    </children>
 </AnchorPane>
