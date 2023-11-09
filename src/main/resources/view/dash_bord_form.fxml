@@ -230,14 +230,14 @@
             <Font name="System Bold" size="10.0" />
          </font>
       </Label>
-      <Label fx:id="lblDate" layoutX="625.0" layoutY="45.0" text="yyyy-DD-mm" textFill="WHITE">
+      <Label fx:id="lblDate" layoutX="625.0" layoutY="44.0" text="yyyy-DD-mm" textFill="WHITE">
          <font>
-            <Font size="17.0" />
+            <Font name="System Bold" size="17.0" />
          </font>
       </Label>
-      <Label fx:id="lblTime" layoutX="625.0" layoutY="73.0" text="00.00.00" textFill="WHITE">
+      <Label fx:id="lblTime" layoutX="625.0" layoutY="72.0" text="00.00.00" textFill="WHITE">
          <font>
-            <Font size="17.0" />
+            <Font name="System Bold" size="17.0" />
          </font>
       </Label>
       <Separator layoutX="789.0" layoutY="48.0" orientation="VERTICAL" prefHeight="45.0" prefWidth="0.0" />
