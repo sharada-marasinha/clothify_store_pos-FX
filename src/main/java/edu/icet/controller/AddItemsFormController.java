@@ -14,7 +14,7 @@ public class AddItemsFormController {
     public AnchorPane LodeFormContent;
 
     ItemDao itemDao = DaoFactory.getDaoFactory().getDaoType(DaoFactory.DaoType.ITEM);
-
+//-----------------------------------------------------------------------------------
     public void backBtnOnAction(ActionEvent actionEvent) throws IOException {
         URL resource = this.getClass().getResource("/view/dash_bord_form.fxml");
 
