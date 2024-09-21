@@ -16,6 +16,7 @@ public class DaoFactory {
     }
     public <T extends SuperDao>T getDaoType(DaoType type){
         switch (type){
+                        //This is a type cast
             case ITEM:return (T)new ItemDaoImpl();
             case EMPLOYEE:return (T) new EmployeeDaoImpl();
             default:return null;
