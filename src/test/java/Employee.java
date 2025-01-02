@@ -1,6 +1,6 @@
-import edu.icet.dao.DaoFactory;
-import edu.icet.dao.custom.EmployeeDao;
-import edu.icet.dto.EmployeeDto;
+import dao.DaoFactory;
+import dao.custom.EmployeeDao;
+import dto.EmployeeDto;
 import org.junit.jupiter.api.Test;
 
 import java.sql.SQLException;

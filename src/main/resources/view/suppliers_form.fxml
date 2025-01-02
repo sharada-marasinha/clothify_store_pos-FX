@@ -14,7 +14,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="LodeFormContent" prefHeight="644.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.SuppliersFormController">
+<AnchorPane fx:id="LodeFormContent" prefHeight="644.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SuppliersFormController">
    <children>
       <ImageView fitHeight="651.0" fitWidth="972.0" layoutY="-1.0" pickOnBounds="true">
          <image>
