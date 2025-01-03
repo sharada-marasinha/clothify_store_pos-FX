@@ -1,8 +1,8 @@
 package controller;
 
 import com.jfoenix.controls.JFXTextField;
-import dao.DaoFactory;
-import dao.custom.EmployeeDao;
+import remository.DaoFactory;
+import remository.custom.EmployeeDao;
 import dto.EmployeeDto;
 import dto.tm.EmployeeTM;
 import javafx.collections.ObservableList;

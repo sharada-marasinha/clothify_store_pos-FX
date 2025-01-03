@@ -1,7 +1,6 @@
 package entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
 @NoArgsConstructor
@@ -12,6 +11,8 @@ import lombok.*;
 @Entity
 @Table(name = "sales_return")
 public class SalesReturn {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private String returnId;
     private String orderId;
     private double total;

@@ -1,6 +1,6 @@
-package dao.custom.impl;
+package remository.custom.impl;
 
-import dao.custom.EmployeeDao;
+import remository.custom.EmployeeDao;
 import dto.tm.EmployeeTM;
 import dto.EmployeeDto;
 import entity.Employee;

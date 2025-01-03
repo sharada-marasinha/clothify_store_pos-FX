@@ -1,6 +1,6 @@
-package dao.custom.impl;
+package remository.custom.impl;
 
-import dao.custom.OrderDao;
+import remository.custom.OrderDao;
 import dto.OrderDto;
 import dto.tm.OrderTM;
 

@@ -1,7 +1,6 @@
 package entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
 @AllArgsConstructor
@@ -12,6 +11,8 @@ import lombok.*;
 @Entity
 @Table(name = "supplier_invoice")
 public class SupplierInvoice {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private String invoiceId;
     private String supplierId;
     private String itemCode;

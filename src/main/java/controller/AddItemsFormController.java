@@ -1,7 +1,7 @@
 package controller;
 
-import dao.custom.ItemDao;
-import dao.DaoFactory;
+import remository.custom.ItemDao;
+import remository.DaoFactory;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

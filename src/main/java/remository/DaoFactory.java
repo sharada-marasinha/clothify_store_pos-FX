@@ -1,7 +1,7 @@
-package dao;
+package remository;
 
-import dao.custom.impl.EmployeeDaoImpl;
-import dao.custom.impl.ItemDaoImpl;
+import remository.custom.impl.EmployeeDaoImpl;
+import remository.custom.impl.ItemDaoImpl;
 
 public class DaoFactory {
     private static DaoFactory daoFactory;

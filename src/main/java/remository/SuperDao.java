@@ -1,4 +1,4 @@
-package dao;
+package remository;
 
 public interface SuperDao {
 }

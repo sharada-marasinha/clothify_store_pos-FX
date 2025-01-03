@@ -1,5 +1,5 @@
-import dao.DaoFactory;
-import dao.custom.EmployeeDao;
+import remository.DaoFactory;
+import remository.custom.EmployeeDao;
 import dto.EmployeeDto;
 import org.junit.jupiter.api.Test;
 

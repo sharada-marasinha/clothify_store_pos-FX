@@ -1,6 +1,6 @@
-package dao.custom.impl;
+package remository.custom.impl;
 
-import dao.custom.ItemDao;
+import remository.custom.ItemDao;
 import dto.ItemDto;
 import dto.tm.ItemTM;
 
