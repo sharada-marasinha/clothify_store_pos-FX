@@ -49,7 +49,6 @@ public class EmployeeDaoImpl implements EmployeeDao {
         Session session = HibernateUtil.getSession();
         try {
             session.beginTransaction();
-
             // Load the entity to be deleted
             Employee employee = session.get(Employee.class, id);
             if (employee != null) {

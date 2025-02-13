@@ -13,7 +13,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="LodeFormContent" prefHeight="644.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SalesReportFormController">
+<AnchorPane fx:id="LodeFormContent" prefHeight="644.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SalesReportFormController">
    <children>
       <ImageView fitHeight="651.0" fitWidth="972.0" layoutY="-1.0" pickOnBounds="true">
          <image>
@@ -51,7 +51,7 @@
          </font>
       </Label>
       <DatePicker layoutX="158.0" layoutY="150.0" prefHeight="25.0" prefWidth="195.0" />
-      <JFXButton layoutX="789.0" layoutY="147.0" prefHeight="25.0" prefWidth="119.0" style="-fx-background-color: #3498db;" text="Get Daily Report" textFill="WHITE">
+      <JFXButton layoutX="789.0" layoutY="147.0" onAction="#btnDailyReportOnAction" prefHeight="25.0" prefWidth="119.0" style="-fx-background-color: #3498db;" text="Get Daily Report" textFill="WHITE">
          <font>
             <Font name="System Bold" size="10.0" />
          </font>

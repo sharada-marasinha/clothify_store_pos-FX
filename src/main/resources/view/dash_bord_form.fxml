@@ -13,7 +13,7 @@
 
 <AnchorPane prefHeight="735.0" prefWidth="1346.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBordFormController">
    <children>
-      <ImageView fitHeight="735.0" fitWidth="1550.0" pickOnBounds="true">
+      <ImageView fitHeight="736.0" fitWidth="1550.0" pickOnBounds="true">
          <image>
             <Image url="@../img/img-min.jpg" />
          </image>
@@ -23,12 +23,12 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </Rectangle>
-      <Label layoutX="91.0" layoutY="43.0" text="Clothify Store" textFill="WHITE">
+      <Label layoutX="91.0" layoutY="38.0" text="Clothify Store" textFill="WHITE">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <ImageView fitHeight="56.0" fitWidth="51.0" layoutX="30.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="56.0" fitWidth="51.0" layoutX="30.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/icons8-clothing-store-64.png" />
          </image>
@@ -37,42 +37,42 @@
          <children>
             <Group>
                <children>
-                  <Rectangle arcHeight="50.0" arcWidth="50.0" height="66.0" layoutX="-114.0" layoutY="-29.0" opacity="0.49" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1091.0">
+                  <Rectangle arcHeight="50.0" arcWidth="50.0" height="66.0" layoutX="-223.0" layoutY="-25.0" opacity="0.49" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1007.0">
                      <cursor>
                         <Cursor fx:constant="DEFAULT" />
                      </cursor>
                   </Rectangle>
-                  <ImageView fitHeight="41.0" fitWidth="46.0" layoutX="675.0" layoutY="-27.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="41.0" fitWidth="46.0" layoutX="715.0" layoutY="-13.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../img/icons8-back-100.png" />
                      </image>
                   </ImageView>
-                  <Label fx:id="lblUserName" layoutX="570.0" layoutY="-12.0" text="Hello Sharada" textFill="WHITE">
+                  <Label fx:id="lblUserName" layoutX="-15.0" layoutY="-6.0" text="Hello Sharada" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Label>
-                  <Label fx:id="lblUserAType" layoutX="570.0" layoutY="-26.0" text="Admin" textFill="WHITE">
+                  <Label fx:id="lblUserAType" layoutX="-15.0" layoutY="-13.0" text="Admin" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="10.0" />
                      </font>
                   </Label>
-                  <Label fx:id="lblUserEmail" layoutX="571.0" layoutY="14.0" text="sharadamarasinha@gmail.com" textFill="WHITE">
+                  <Label fx:id="lblUserEmail" layoutX="-15.0" layoutY="14.0" text="sharadamarasinha@gmail.com" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="10.0" />
                      </font>
                   </Label>
-                  <Label fx:id="lblDate" layoutX="163.0" layoutY="-24.0" text="yyyy-DD-mm" textFill="WHITE">
+                  <Label fx:id="lblDate" layoutX="415.0" layoutY="-5.0" text="yyyy-DD-mm" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="17.0" />
                      </font>
                   </Label>
-                  <Label fx:id="lblTime" layoutX="163.0" layoutY="4.0" text="00.00.00" textFill="WHITE">
+                  <Label fx:id="lblTime" layoutX="566.0" layoutY="-5.0" text="00.00.00" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="17.0" />
                      </font>
                   </Label>
-                  <Separator layoutX="327.0" layoutY="-20.0" orientation="VERTICAL" prefHeight="45.0" prefWidth="0.0" />
+                  <Separator layoutX="-40.0" layoutY="-15.0" orientation="VERTICAL" prefHeight="45.0" prefWidth="0.0" />
                </children>
             </Group>
          </children>
@@ -90,7 +90,7 @@
             <Group layoutX="-256.0" layoutY="207.0" />
          </children>
       </AnchorPane>
-      <Group layoutX="50.0" layoutY="136.0">
+      <Group layoutX="50.0" layoutY="115.0">
          <children>
             <JFXButton contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" layoutY="26.0" onAction="#btnOrderOnAction" prefHeight="82.0" prefWidth="84.0" style="-fx-background-color: white;" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
                <graphic>
@@ -114,7 +114,7 @@
             </Label>
          </children>
       </Group>
-      <Group layoutX="50.0" layoutY="260.0">
+      <Group layoutX="50.0" layoutY="239.0">
          <children>
             <JFXButton contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" layoutY="26.0" onAction="#btnItemOnAction" prefHeight="82.0" prefWidth="84.0" style="-fx-background-color: white;" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
                <graphic>
@@ -138,7 +138,7 @@
             </Label>
          </children>
       </Group>
-      <Group layoutX="51.0" layoutY="393.0">
+      <Group layoutX="51.0" layoutY="372.0">
          <children>
             <JFXButton contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" layoutY="26.0" onAction="#btnEmployeeOnAction" prefHeight="82.0" prefWidth="84.0" style="-fx-background-color: white;" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
                <graphic>
@@ -166,7 +166,7 @@
             </Label>
          </children>
       </Group>
-      <Group layoutX="173.0" layoutY="349.0">
+      <Group layoutX="173.0" layoutY="328.0">
          <children>
             <JFXButton contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" layoutY="26.0" onAction="#btnSupplierOnAction" prefHeight="82.0" prefWidth="84.0" style="-fx-background-color: white;" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
                <graphic>
@@ -194,7 +194,7 @@
             </Label>
          </children>
       </Group>
-      <Group layoutX="49.0" layoutY="536.0">
+      <Group layoutX="49.0" layoutY="507.0">
          <children>
             <JFXButton contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="2.0" layoutY="26.0" onAction="#btnOrderDetailsOnAction" prefHeight="82.0" prefWidth="84.0" style="-fx-background-color: white;" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
                <graphic>
@@ -218,7 +218,7 @@
             </Label>
          </children>
       </Group>
-      <Group layoutX="173.0" layoutY="216.0">
+      <Group layoutX="173.0" layoutY="195.0">
          <children>
             <JFXButton contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" layoutY="26.0" onAction="#btnSalesReturnOnAction" prefHeight="82.0" prefWidth="84.0" style="-fx-background-color: white;" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
                <graphic>
@@ -242,7 +242,7 @@
             </Label>
          </children>
       </Group>
-      <Group layoutX="173.0" layoutY="486.0">
+      <Group layoutX="173.0" layoutY="465.0">
          <children>
             <JFXButton fx:id="btnReport" contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" layoutY="26.0" onAction="#btnReportsOnAction" prefHeight="82.0" prefWidth="84.0" style="-fx-background-color: white;" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
                <graphic>
@@ -266,5 +266,10 @@
             </Label>
          </children>
       </Group>
+      <Label fx:id="lblUserEmail1" layoutX="87.0" layoutY="673.0" text="sharadamarasinha@gmail.com" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
